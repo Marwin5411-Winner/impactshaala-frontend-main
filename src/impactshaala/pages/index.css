@@ -1,0 +1,89 @@
+
+
+.nav-fill .nav-item .nav-link {
+  color: var(--bs-primary);
+  border: #ffff;
+}
+.nav-tabs .nav-link.active {
+  background-color: #ffff;
+  color: var(--bs-primary);
+  border: #ffff;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-decoration: underline; /* Added underline */
+}
+.nav-link {
+  font-size: 1.1em;
+}
+
+.prussianblue {
+  color: #003049;
+}
+
+.sunrays {
+  color: #FCBF49;
+}
+
+.tangerine {
+  color: #F77F00;
+}
+
+.punchred {
+  color: #D62828;
+}
+
+.coolblack {
+  color: #021621;
+}
+
+/* styles.css */
+
+.prussianblue-button {
+  background-color: #003049;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.sunrays-button {
+  background-color: #FCBF49;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.tangerine-button {
+  background-color: #F77F00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.punchred-button {
+  background-color: #D62828;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.coolblack-button {
+  background-color: #021621;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.hide-scr0llbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
