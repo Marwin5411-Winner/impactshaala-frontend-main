@@ -1,0 +1,670 @@
+[
+  {
+    "category": "Educational",
+    "subcategories": [
+      {
+        "name": "Experiential Learning Opportunity",
+        "subtypes": [
+          {
+            "name": "Guest Lecture",
+            "keyword": "Inviting experts to speak on specific topics."
+          },
+          {
+            "name": "Workshop",
+            "keyword": "Conducting hands-on training sessions on various subjects."
+          },
+          {
+            "name": "Project Based Learning",
+            "keyword": "Implementing learning through projects and practical activities."
+          },
+          {
+            "name": "Extracurricular Activities",
+            "keyword": "Organizing activities beyond the standard curriculum."
+          },
+          {
+            "name": "Co-Curricular Activities",
+            "keyword": "Facilitating activities that complement and enhance the formal curriculum, promoting holistic development and personal growth."
+          },
+          {
+            "name": "Online Courses and e-Learning",
+            "keyword": "Offering digital learning options and courses."
+          },
+          {
+            "name": "Student Exchange Programs",
+            "keyword": "Facilitating exchange programs to broaden educational experiences."
+          },
+          {
+            "name": "Research and Innovation",
+            "keyword": "Encouraging inquiry and creativity through projects that promote scientific research and innovative thinking."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Student Support Services",
+        "subtypes": [
+          {
+            "name": "Student Support and Services",
+            "keyword": "Providing resources and assistance to ensure students' academic success, personal well-being, and overall development."
+          },
+          {
+            "name": "Financial Aid",
+            "keyword": "Providing financial assistance to students."
+          },
+          {
+            "name": "Special Education Programs",
+            "keyword": "Providing tailored education for students with special needs."
+          },
+          {
+            "name": "Tutoring and Mentorship",
+            "keyword": "Offering additional academic support and guidance."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Support Educational Institutions with resources & infrastructure",
+        "subtypes": [
+          {
+            "name": "Educational Resources & Digital Learning Devices",
+            "keyword": "Providing necessary tools, resources, and digital devices to support modern learning environments."
+          },
+          {
+            "name": "Infrastructure Support",
+            "keyword": "Improving physical and digital infrastructure for better learning environments."
+          },
+          {
+            "name": "Library and Learning Resources",
+            "keyword": "Enhancing access to books, journals, and other educational materials."
+          },
+          {
+            "name": "Physical Education Equipment",
+            "keyword": "Providing equipment and resources to support physical education and promote student fitness."
+          },
+          {
+            "name": "Educational Technology Integration",
+            "keyword": "Integrating technology into teaching and learning processes."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Teacher Support & Professional Development",
+        "subtypes": [
+          {
+            "name": "Teacher Support",
+            "keyword": "Supplying teachers to educational institutions that are short on teaching staff."
+          },
+          {
+            "name": "Professional Development for Educators",
+            "keyword": "Providing ongoing training and development opportunities for teachers."
+          },
+          {
+            "name": "Assessment and Evaluation",
+            "keyword": "Implementing methods to measure and evaluate learning outcomes."
+          },
+          {
+            "name": "Curriculum Development",
+            "keyword": "Creating and updating educational programs and materials."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Educational Field Trip Venues",
+        "subtypes": [
+          {
+            "name": "Museums",
+            "keyword": "Institutions preserving and showcasing artifacts and exhibitions on various subjects."
+          },
+          {
+            "name": "Science Centers",
+            "keyword": "Facilities focused on interactive and educational science exhibits and activities."
+          },
+          {
+            "name": "Historical Sites",
+            "keyword": "Locations of historical significance that offer insights into past events and cultures."
+          },
+          {
+            "name": "National Parks",
+            "keyword": "Protected areas offering opportunities to explore natural landscapes and wildlife."
+          },
+          {
+            "name": "Zoos and Aquariums",
+            "keyword": "Facilities housing and displaying a variety of animal species for educational purposes."
+          },
+          {
+            "name": "Planetariums",
+            "keyword": "Venues offering immersive experiences related to astronomy and space science."
+          },
+          {
+            "name": "Botanical Gardens",
+            "keyword": "Gardens featuring diverse plant species, often used for educational and conservation purposes."
+          },
+          {
+            "name": "Wildlife Sanctuaries",
+            "keyword": "Protected areas focused on the conservation and study of wildlife species."
+          },
+          {
+            "name": "Cultural Heritage Sites",
+            "keyword": "Sites preserving and promoting cultural heritage and traditions."
+          },
+          {
+            "name": "Environmental Education Centers",
+            "keyword": "Centers dedicated to teaching about environmental conservation and sustainability."
+          },
+          {
+            "name": "Art Galleries",
+            "keyword": "Spaces dedicated to the display of visual arts, including paintings, sculptures, and photography."
+          },
+          {
+            "name": "Factories and Industrial Sites",
+            "keyword": "Industrial locations offering tours and insights into manufacturing and production processes."
+          },
+          {
+            "name": "Farms and Agricultural Centers",
+            "keyword": "Agricultural sites providing education on farming practices and food production."
+          },
+          {
+            "name": "Nature Reserves",
+            "keyword": "Areas protected for the conservation of natural environments and biodiversity."
+          },
+          {
+            "name": "Marine Research Institutes",
+            "keyword": "Institutions dedicated to the study and research of marine ecosystems and species."
+          },
+          {
+            "name": "Archaeological Sites",
+            "keyword": "Sites of historical excavations and studies, often open to the public for educational tours."
+          },
+          {
+            "name": "Libraries",
+            "keyword": "Facilities housing collections of books, manuscripts, and other educational resources."
+          },
+          {
+            "name": "Theaters",
+            "keyword": "Venues for performing arts, including plays, musicals, and other live performances."
+          },
+          {
+            "name": "Historical Reenactment Sites",
+            "keyword": "Locations offering reenactments and immersive experiences of historical events."
+          },
+          {
+            "name": "Urban Exploration Areas",
+            "keyword": "Urban areas explored for educational purposes, often highlighting architecture, history, and culture."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Others"
+      }
+    ]
+  },
+  {
+    "category": "Social Impact",
+    "subcategories": [
+      {
+        "name": "Project Management and Support",
+        "subtypes": [
+          {
+            "name": "Program Development and Management",
+            "keyword": "Creating, implementing, and overseeing projects and programs that address specific social issues."
+          },
+          {
+            "name": "Fundraising",
+            "keyword": "Activities focused on securing financial resources and donations to support social impact projects."
+          },
+          {
+            "name": "Volunteer Engagement",
+            "keyword": "Recruiting, training, and coordinating volunteers to support social impact projects."
+          },
+          {
+            "name": "Capacity Building",
+            "keyword": "Strengthening skills and abilities of individuals and organizations."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Community Engagement and Outreach",
+        "subtypes": [
+          {
+            "name": "Community Outreach",
+            "keyword": "Engaging with community members to understand their needs."
+          },
+          {
+            "name": "Volunteering",
+            "keyword": "Participating in unpaid activities intended to benefit the community."
+          },
+          {
+            "name": "Public Awareness Campaigns",
+            "keyword": "Designing campaigns to educate and inform the public about social issues."
+          },
+          {
+            "name": "Advocacy and Public Policy",
+            "keyword": "Efforts to influence public policy and advocate for legislative changes."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Social Entrepreneurship and Emergency Response",
+        "subtypes": [
+          {
+            "name": "Social Entrepreneurship",
+            "keyword": "Developing businesses with the primary goal of solving social problems."
+          },
+          {
+            "name": "Emergency Relief and Response",
+            "keyword": "Coordinating and delivering aid to communities affected by emergencies."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Educational Resources and Infrastructure Support",
+        "subtypes": [
+          {
+            "name": "Teacher Support",
+            "keyword": "Supplying teachers to government educational institutions that are short on teaching staff."
+          },
+          {
+            "name": "Professional Development for Educators",
+            "keyword": "Providing ongoing training and development opportunities for teachers."
+          },
+          {
+            "name": "Assessment and Evaluation",
+            "keyword": "Implementing methods to measure and evaluate learning outcomes."
+          },
+          {
+            "name": "Curriculum Development",
+            "keyword": "Creating and updating educational programs and materials."
+          },
+          {
+            "name": "Educational Resources & Digital Learning Devices",
+            "keyword": "Providing necessary tools, resources, and digital devices to support modern learning environments."
+          },
+          {
+            "name": "Infrastructure Support",
+            "keyword": "Improving physical and digital infrastructure for better learning environments."
+          },
+          {
+            "name": "Library and Learning Resources",
+            "keyword": "Enhancing access to books, journals, and other educational materials."
+          },
+          {
+            "name": "Physical Education Equipment",
+            "keyword": "Providing equipment and resources to support physical education and promote student fitness."
+          },
+          {
+            "name": "Educational Technology Integration",
+            "keyword": "Integrating technology into teaching and learning processes."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Others"
+      }
+    ]
+  },
+  {
+    "category": "Live Events",
+    "subcategories": [
+      {
+        "name": "Conference & Discussion Forums",
+        "subtypes": [
+          {
+            "name": "Educational",
+            "keyword": "Events focused on educational topics, trends, and best practices to foster learning and networking."
+          },
+          {
+            "name": "Social Impact",
+            "keyword": "Events that address social issues, promote sustainable development, and facilitate networking among social impact professionals."
+          },
+          {
+            "name": "Career Advancement",
+            "keyword": "Programs and opportunities for individuals to enhance their career prospects and achieve professional growth."
+          },
+          {
+            "name": "Passion",
+            "keyword": "Activities and programs that allow individuals to explore and pursue their interests and passions."
+          },
+          {
+            "name": "Entrepreneurship & Business",
+            "keyword": "Access resources, mentorship, and networking opportunities for aspiring entrepreneurs and business professionals to start and grow their ventures."
+          }
+        ]
+      },
+      {
+        "name": "Educational & Entertainment Venues",
+        "subtypes": [
+          {
+            "name": "Museums",
+            "keyword": "Institutions preserving and showcasing artifacts and exhibitions on various subjects."
+          },
+          {
+            "name": "Science Centers",
+            "keyword": "Facilities focused on interactive and educational science exhibits and activities."
+          },
+          {
+            "name": "Historical Sites",
+            "keyword": "Locations of historical significance that offer insights into past events and cultures."
+          },
+          {
+            "name": "National Parks",
+            "keyword": "Protected areas offering opportunities to explore natural landscapes and wildlife."
+          },
+          {
+            "name": "Zoos and Aquariums",
+            "keyword": "Facilities housing and displaying a variety of animal species for educational purposes."
+          },
+          {
+            "name": "Planetariums",
+            "keyword": "Venues offering immersive experiences related to astronomy and space science."
+          },
+          {
+            "name": "Botanical Gardens",
+            "keyword": "Gardens featuring diverse plant species, often used for educational and conservation purposes."
+          },
+          {
+            "name": "Wildlife Sanctuaries",
+            "keyword": "Protected areas focused on the conservation and study of wildlife species."
+          },
+          {
+            "name": "Cultural Heritage Sites",
+            "keyword": "Sites preserving and promoting cultural heritage and traditions."
+          },
+          {
+            "name": "Environmental Education Centers",
+            "keyword": "Centers dedicated to teaching about environmental conservation and sustainability."
+          },
+          {
+            "name": "Art Galleries",
+            "keyword": "Spaces dedicated to the display of visual arts, including paintings, sculptures, and photography."
+          },
+          {
+            "name": "Factories and Industrial Sites",
+            "keyword": "Industrial locations offering tours and insights into manufacturing and production processes."
+          },
+          {
+            "name": "Farms and Agricultural Centers",
+            "keyword": "Agricultural sites providing education on farming practices and food production."
+          },
+          {
+            "name": "Nature Reserves",
+            "keyword": "Areas protected for the conservation of natural environments and biodiversity."
+          },
+          {
+            "name": "Marine Research Institutes",
+            "keyword": "Institutions dedicated to the study and research of marine ecosystems and species."
+          },
+          {
+            "name": "Archaeological Sites",
+            "keyword": "Sites of historical excavations and studies, often open to the public for educational tours."
+          },
+          {
+            "name": "Libraries",
+            "keyword": "Facilities housing collections of books, manuscripts, and other educational resources."
+          },
+          {
+            "name": "Theaters",
+            "keyword": "Venues for performing arts, including plays, musicals, and other live performances."
+          },
+          {
+            "name": "Historical Reenactment Sites",
+            "keyword": "Locations offering reenactments and immersive experiences of historical events."
+          },
+          {
+            "name": "Urban Exploration Areas",
+            "keyword": "Urban areas explored for educational purposes, often highlighting architecture, history, and culture."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Competition",
+        "subtypes": [
+          {
+            "name": "Educational Competition",
+            "keyword": "Contests that challenge participants to demonstrate their knowledge and skills in educational topics."
+          },
+          {
+            "name": "Social Impact Competition",
+            "keyword": "Competitions aimed at creating innovative solutions to social issues and promoting sustainable development."
+          },
+          {
+            "name": "Career Competition",
+            "keyword": "Contests focused on career-related skills, job readiness, and professional growth."
+          },
+          {
+            "name": "Passion Competition",
+            "keyword": "Opportunities for individuals to showcase their talents and pursue their interests through competitive events."
+          },
+          {
+            "name": "Entrepreneurship & Business Competition",
+            "keyword": "Competitions for aspiring entrepreneurs and business professionals to pitch their ideas and compete for recognition and support."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Others",
+        "subtypes": [
+          {
+            "name": "Type",
+            "keyword": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Careers",
+    "subcategories": [
+      {
+        "name": "Explore Careers (Receiving Centric)",
+        "subtypes": [
+          {
+            "name": "Career Counseling",
+            "keyword": "Guidance and advice to individuals to help them make informed career choices."
+          },
+          {
+            "name": "Expert Panels & Webinars",
+            "keyword": "Discussions and presentations by industry experts to provide insights into various career paths."
+          },
+          {
+            "name": "Apprenticeships",
+            "keyword": "Hands-on work experience and training in a specific profession."
+          },
+          {
+            "name": "Internships",
+            "keyword": "Temporary positions that offer practical experience in a particular field."
+          },
+          {
+            "name": "Job Shadowing",
+            "keyword": "Allowing individuals to observe professionals in their workplace to gain insights into a specific career."
+          },
+          {
+            "name": "Project Based Learning",
+            "keyword": "Implementing learning through projects and practical activities related to career interests."
+          },
+          {
+            "name": "Career Fairs and Expos",
+            "keyword": "Events where individuals can meet potential employers and learn about different career opportunities."
+          },
+          {
+            "name": "Mentorship Programs",
+            "keyword": "Structured mentorship for guidance and career development."
+          },
+          {
+            "name": "Student Job",
+            "keyword": ""
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Specialize in a Career (Receiving Centric)",
+        "subtypes": [
+          {
+            "name": "Advanced Online Courses",
+            "keyword": "Online learning programs to gain specialized knowledge and skills."
+          },
+          {
+            "name": "Mentorship Program",
+            "keyword": "Structured mentorship for guidance and career development."
+          },
+          {
+            "name": "Professional Onsite Coaching",
+            "keyword": "Hands-on training and coaching in a workplace setting."
+          },
+          {
+            "name": "Full Time Job",
+            "keyword": "Full time employment in a role that aligns with one’s specialized career path."
+          },
+          {
+            "name": "Certification Programs",
+            "keyword": "Professional certifications that validate specialized skills and knowledge."
+          },
+          {
+            "name": "Workshops and Seminars",
+            "keyword": "Focused training sessions on specific career-related topics."
+          },
+          {
+            "name": "Skill Development Courses",
+            "keyword": "Courses designed to develop specific skills essential for career specialization."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Provide Opportunities for Career Exploration (Providing Centric)",
+        "subtypes": [
+          {
+            "name": "Career Counseling",
+            "keyword": "Guidance and advice to individuals to help them make informed career choices."
+          },
+          {
+            "name": "Expert Panels & Webinars",
+            "keyword": "Discussions and presentations by industry experts to provide insights into various career paths."
+          },
+          {
+            "name": "Apprenticeships",
+            "keyword": "Hands-on work experience and training in a specific profession."
+          },
+          {
+            "name": "Internships",
+            "keyword": "Temporary positions that offer practical experience in a particular field."
+          },
+          {
+            "name": "Job Shadowing",
+            "keyword": "Allowing individuals to observe professionals in their workplace to gain insights into a specific career."
+          },
+          {
+            "name": "Project Based Learning",
+            "keyword": "Implementing learning through projects and practical activities related to career interests."
+          },
+          {
+            "name": "Career Fairs and Expos",
+            "keyword": "Events where individuals can meet potential employers and learn about different career opportunities."
+          },
+          {
+            "name": "Mentorship Programs",
+            "keyword": "Structured mentorship for guidance and career development."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Provide Opportunities to Specialize in a Career (Providing Centric)",
+        "subtypes": [
+          {
+            "name": "Advanced Online Courses",
+            "keyword": "Online learning programs to gain specialized knowledge and skills."
+          },
+          {
+            "name": "Mentorship Program",
+            "keyword": "Structured mentorship for guidance and career development."
+          },
+          {
+            "name": "Professional Onsite Coaching",
+            "keyword": "Hands-on training and coaching in a workplace setting."
+          },
+          {
+            "name": "Full Time Job",
+            "keyword": "Full time employment in a role that aligns with one’s specialized career path."
+          },
+          {
+            "name": "Certification Programs",
+            "keyword": "Professional certifications that validate specialized skills and knowledge."
+          },
+          {
+            "name": "Workshops and Seminars",
+            "keyword": "Focused training sessions on specific career-related topics."
+          },
+          {
+            "name": "Skill Development Courses",
+            "keyword": "Courses designed to develop specific skills essential for career specialization."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Others",
+        "subtypes": [
+          {
+            "name": "Type",
+            "keyword": ""
+          }
+        ]
+      }
+    ]
+  }
+]

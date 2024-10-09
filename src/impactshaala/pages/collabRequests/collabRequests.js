@@ -111,7 +111,7 @@ const CollaborationRequests = () => {
                 <Card>
                   <Card.Header className="d-flex justify-content-between">
                     <div className="header-title">
-                      <h4 className="card-title">Collaboration Requests</h4>
+                      <h4 className="card-title">My Opportunity</h4>
 											<div className="d-flex flex-row mt-2" style={{gap: "5px"}}>
 												{
 													types.map((type, index) => {

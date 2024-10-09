@@ -16,7 +16,7 @@ function SignUpIndex() {
   const navigate = useNavigate()
 
   const [usertypes, setUsertypes] = useState([])
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(4);
   const [loading, setLoading] = useState(false)
   const [userDetails, setUserDetails] = useState({
 		accountType: "",

@@ -17,7 +17,7 @@ const CollabRequestCard = ({
 
 	useEffect(() => {
 		if(type == "sent") setBtns({secondary: "Cancel"})
-		if(type == "received") setBtns({primary: "Confirm", secondary: "Delete Request"})
+		if(type == "received") setBtns({primary: "Review"})
 		if(type == "accepted") setBtns({})
 		if(type == "rejected") setBtns({})
 		if(type == "dropped") setBtns({tertiary: "View Profile"})

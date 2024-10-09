@@ -5,6 +5,7 @@ import ProfileCard from '../impactshaala/pages/home/components/Profile';
 import Colaberation from '../impactshaala/pages/home/components/Collaboration';
 import Internship from '../impactshaala/pages/home/components/Internship';
 import PreferenceCard from '../impactshaala/pages/home/components/PreferenceCard';
+import GiveUsAReview from '../impactshaala/pages/home/components/GiveUsAReview';
 import { useEffect, useState } from 'react';
 import { getLocalStorage } from '../utilities/localStorage';
 import { useNavigate } from 'react-router-dom';
@@ -41,10 +42,10 @@ const PageTemplate1 = ({children}) => {
                 <Colaberation />
               </Row>
               <Row>
-                <Internship />
+                  <GiveUsAReview />
               </Row>
               <Row>
-                <PreferenceCard />
+                
               </Row>
             </div>
           </Col>

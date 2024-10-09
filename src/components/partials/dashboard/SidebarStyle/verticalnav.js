@@ -139,6 +139,8 @@ const VerticalNav = React.memo(() => {
             <span className="item-name">Saved Post</span>
           </Link>
         </li>
+
+       {/* TODO:  */}
         <li
           className={`${location.pathname === "/collab/requests" ? "active" : ""} nav-item `}
           style={{ cursor: "pointer", margin: "10px" }}
@@ -149,7 +151,7 @@ const VerticalNav = React.memo(() => {
             to="/collab/requests"
           >
             <i className="icon material-symbols-outlined">groups</i>
-            <span className="item-name">Collaborations</span>
+            <span className="item-name">My Oppotunities</span>
           </Link>
         </li>
 

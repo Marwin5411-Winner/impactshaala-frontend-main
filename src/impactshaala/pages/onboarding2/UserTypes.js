@@ -11,6 +11,7 @@ const usertypes = [
 	"usertype3",
 	"usertype4",
 	"usertype5",
+	"usertype6"
 ]
 
 const UserTypes = ({userDetails, setUserDetails, nextStep, prevStep}) => {
@@ -36,6 +37,7 @@ const UserTypes = ({userDetails, setUserDetails, nextStep, prevStep}) => {
 			usertype3: "",
 			usertype4: "",
 			usertype5: "",
+			usertype6: "",
 		}))
 		prevStep()
 	}
@@ -77,16 +79,38 @@ const SelectUserType = ({formData, userDetails, setUserDetails, setFormComplete}
 
 	useEffect(() => {
 		if(userDetails && userDetails[formData.key] && formData.options) {
-			if(formData.inputType === "input") {
-				setNextFormData(formData.options[0])
-				return
-			}
-			const selected = formData.options.find((item) => item.name === userDetails[formData.key])
-			if(selected && (selected.options || selected.inputType === "input" || selected.inputType === "multi-field"))
-				setNextFormData(selected)
-			if(selected && !selected.options) {
-				setFormComplete(true)
-			}
+			if (formData.inputType === "input") {
+				setNextFormData(formData.options[0]);
+				return;
+			  }
+		
+			  if (formData.inputType === "multi-select") {
+				// Handle multi-select options
+				// Extract values from the selected objects in userDetails[formData.key]
+				const selectedValues = userDetails[formData.key].map((item) => item.label);
+
+				// Filter the form options based on the selected values
+				const selectedItems = formData.options.filter((item) => selectedValues.includes(item.name));
+				console.log(selectedItems);
+				
+				if (selectedItems.length > 0) {
+				  setNextFormData(selectedItems[0]); // Set the first item with options or next step
+				}
+				
+				// Mark form complete if no next options
+				if (selectedItems.length > 0 && !selectedItems[0].options) {
+				  setFormComplete(true);
+				}
+			  } else {
+				// Handle single-select
+				const selected = formData.options.find((item) => item.name === userDetails[formData.key]);
+				if (selected && (selected.options || selected.inputType === "input" || selected.inputType === "multi-field")) {
+				  setNextFormData(selected);
+				}
+				if (selected && !selected.options) {
+				  setFormComplete(true);
+				}
+			  }
 		} else setNextFormData(null)
 	}, [userDetails])
 

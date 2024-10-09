@@ -11,6 +11,17 @@ export const createMediaPost = async (info) => {
   }  
 }
 
+export const getMediaPost = async (id) => {
+	try {
+    const res = await axiosAuthInstance.get(`/media-post/get-media-post/${id}`);
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    const errRes = (err && err.response) || err.message || "Network Error";
+    return { errRes };
+  }   
+}
+
 export const listMyMediaPosts = async () => {
 	try {
     const res = await axiosAuthInstance.get(`/media-post/list-my-posts`);
@@ -66,16 +77,18 @@ export const updateMediaPost = async (info, id) => {
   }   
 }
 
-export const likeMediaPost = async (id) => {
-	try {
-    const res = await axiosAuthInstance.get(`/media-post/like/` + id);
+export const likeMediaPost = async (id, reactionType) => {
+  try {
+    const res = await axiosAuthInstance.post(`/media-post/like/` + id, { reactionType });
     const data = res && res.data;
     return { data };
   } catch (err) {
+    console.log(err);
     const errRes = (err && err.response) || err.message || "Network Error";
     return { errRes };
-  }   
-}
+  }
+};
+
 
 export const unlikeMediaPost =  async (id) => {
 	try {
@@ -154,9 +167,31 @@ export const saveMediaPost = async (id) => {
   }    
 }
 
+export const saveMediaPostDraft = async (id) => {
+  try {
+    const res = await axiosAuthInstance.get(`/media-post/save/${id}`);
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    const errRes = (err && err.response) || err.message || "Network Error";
+    return { errRes };
+  }    
+}
+
 export const unsaveMediaPost = async (id) => {
   try {
     const res = await axiosAuthInstance.get(`/media-post/unsave/${id}`);
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    const errRes = (err && err.response) || err.message || "Network Error";
+    return { errRes };
+  }     
+}
+
+export const getSavedPosts = async () => {
+  try {
+    const res = await axiosAuthInstance.get(`/media-post/get-savedpost`);
     const data = res && res.data;
     return { data };
   } catch (err) {

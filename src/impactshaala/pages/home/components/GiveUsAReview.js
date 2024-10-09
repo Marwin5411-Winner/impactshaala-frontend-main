@@ -1,18 +1,21 @@
-import { Button, Card, Col, Row } from "react-bootstrap";
+import React from 'react'
+import { Row, Col, Card, Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
-function Colaberation() {
-  return (
-     <Card>
+
+const GiveUsAReview = ({data}) => {
+    return (
+        <div>
+             <Card>
         <Card.Body>
            <Row>
              <Col style={{textAlign: "center"}} className="pt-2 d-flex">
-               <h4 className="text-primary">Not able to find what are you looking for? Let us help you.</h4>
+               <h4 className="text-primary text-center">Give us a review</h4>
             </Col>
            </Row>
            <Row>
               <Col className="py-2" >
-                <Link to="/requirement-form">
+                <Link to="/giveusareview">
                   <Button variant="outline-primary" style={{width: "100%", borderRadius: "100px", fontWeight: "700"}}>Click Here</Button>
                 </Link>
               </Col>
@@ -20,7 +23,8 @@ function Colaberation() {
         </Card.Body>
 
      </Card>
-  );
-}
+        </div>
+    )
+};
 
-export default Colaberation;    
+export default GiveUsAReview

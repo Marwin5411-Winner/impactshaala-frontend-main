@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Row,
-  Col,
-  Nav,
-  Tab,
-  ProgressBar,
-} from "react-bootstrap";
+import { Row, Col, Nav, Tab, ProgressBar } from "react-bootstrap";
 import Card from "../../../components/Card";
 import { Link } from "react-router-dom";
 import {
@@ -41,12 +35,12 @@ import AccomplishmentsSection from "../../../components/accomplishments/Accompli
 import { getMyAccomplishments } from "../../../api/accomplishments";
 
 const MyProfile = () => {
-  const location = useLocation()
+  const location = useLocation();
   const [userData, setUserData] = useState({});
   const [mediaPosts, setMediaPosts] = useState();
   const [polls, setPolls] = useState([]);
   const [accomplishments, setAccomplishments] = useState([]);
-  const [activeTab, setActiveTab] = useState("about")
+  const [activeTab, setActiveTab] = useState("about");
 
   const fetchMyProfile = async () => {
     const profile = await getMyProfile();
@@ -91,7 +85,7 @@ const MyProfile = () => {
   };
 
   const fetchMyAccomplishments = async () => {
-    const resp = await getMyAccomplishments()
+    const resp = await getMyAccomplishments();
     if (resp.errRes) {
       if (resp.errRes.response) {
         window.alert(resp.errRes.response.data.message);
@@ -107,7 +101,7 @@ const MyProfile = () => {
     if (resp.data.success) {
       setAccomplishments(resp.data.data);
     }
-  }
+  };
 
   const handleDeletePost = async (id) => {
     const resp = await deleteMediaPost(id);
@@ -136,146 +130,136 @@ const MyProfile = () => {
   }, []);
 
   useEffect(() => {
-    const tab = location.hash.replace("#", "")
-    if(tab) {
-      if(tab === "about-tab") setActiveTab("about")
-      if(tab === "posts-tab" || tab === "polls-tab") setActiveTab("posts")
-      if(tab === "projects-tab") setActiveTab("projects")
-      if(tab === "accomplishments-tab") setActiveTab("accomplishments")
-    }
-    else setActiveTab("about")
-  }, [location])
+    const tab = location.hash.replace("#", "");
+    if (tab) {
+      if (tab === "about-tab") setActiveTab("about");
+      if (tab === "posts-tab" || tab === "polls-tab") setActiveTab("posts");
+      if (tab === "projects-tab") setActiveTab("projects");
+      if (tab === "accomplishments-tab") setActiveTab("accomplishments");
+    } else setActiveTab("about");
+  }, [location]);
 
   return (
     <>
       <PageTemplate2>
         <Row className="px-5 pt-5">
           <Col sm={12}>
-            <Card>
-              <Card.Body className=" profile-page p-0">
-                <div className="profile-header">
-                  <div className="position-relative">
-                    <img
-                      loading="lazy"
-                      src={img1}
-                      alt="profile-bg"
-                      className="rounded img-fluid"
-                    />
-                    <ul className="header-nav list-inline d-flex flex-wrap justify-end p-0 m-0">
-                      <li>
-                        <Link
-                          to="/dashboard/app/edit-profile"
-                          className="material-symbols-outlined position-relative"
-                          style={{ zIndex: "100" }}
-                        >
-                          edit
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="user-detail text-center mb-3">
-                    <div className="profile-img">
-                      <img
-                        loading="lazy"
-                        src={
-                          userData.profilePic
-                            ? userData.profilePic
-                            : defaultUser
-                        }
-                        alt="profile-img1"
-                        className="avatar-130 img-fluid"
-                        style={{
-                          width: "150px",
-                          height: "150px",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
-                    <div className="profile-detail">
-                      <h3>{userData.name}</h3>
-                    </div>
-                  </div>
-                  <div className="profile-info p-3 d-flex align-items-center justify-content-between position-relative">
-                    <div className="social-links">
-                      <ul
-                        className="social-data-block d-flex align-items-center justify-content-between list-inline p-0 m-0"
-                        style={{ gap: "5px" }}
-                      >
-                        <li className="text-center pe-3">
-                          <Link to="#">
-                            <BsFacebook
-                              style={{ width: "20px", height: "20px" }}
-                            />
-                          </Link>
-                        </li>
-                        <li className="text-center pe-3">
-                          <Link to="#">
-                            <BsTwitterX
-                              style={{ width: "20px", height: "20px" }}
-                            />
-                          </Link>
-                        </li>
-                        <li className="text-center pe-3">
-                          <Link to="#">
-                            <BsInstagram
-                              style={{ width: "20px", height: "20px" }}
-                            />
-                          </Link>
-                        </li>
-                        <li className="text-center pe-3">
-                          <Link to="#">
-                            <BsYoutube
-                              style={{ width: "20px", height: "20px" }}
-                            />
-                          </Link>
-                        </li>
-                        <li className="text-center md-pe-3 pe-0">
-                          <Link to="#">
-                            <BsLinkedin
-                              style={{ width: "20px", height: "20px" }}
-                            />
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="social-info">
-                      <ul className="social-data-block d-flex align-items-center justify-content-between list-inline p-0 m-0">
-                        <li className="text-center ps-3">
-                          <h6>Posts</h6>
-                          <p className="mb-0">690</p>
-                        </li>
-                        <li className="text-center ps-3">
-                          <h6>Followers</h6>
-                          <p className="mb-0">206</p>
-                        </li>
-                        <li className="text-center ps-3">
-                          <h6>Following</h6>
-                          <p className="mb-0">100</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+            <Card className="profile-page">
+              <Card.Body className="p-0">
                 <div>
-                  <ProgressBar
-                    now={60}
-                    label={"60%"}
-                    variant="success"
-                    animated
-                  />
+                  <div
+                    className="profile-header position-relative"
+                    style={{ height: "300px", marginBottom: "50px" }}
+                  >
+                    <div className="">
+                      {/* Background banner */}
+                      <div
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                        }}
+                      >
+                        <img
+                          loading="lazy"
+                          src={img1} // This is the banner image
+                          alt="profile-bg"
+                          className="w-100"
+                          style={{ objectFit: "cover", height: "100%" }}
+                        />
+                      </div>
+
+                      {/* Profile Image */}
+                      <div
+                        className="position-absolute"
+                        style={{ left: "30px", bottom: "-50px" }}
+                      >
+                        <img
+                          loading="lazy"
+                          src={
+                            userData.profilePic
+                              ? userData.profilePic
+                              : defaultUser
+                          }
+                          alt="profile-img1"
+                          className="rounded-circle"
+                          style={{
+                            width: "150px",
+                            height: "150px",
+                            objectFit: "cover",
+                            border: "5px solid white",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                {/* User Information */}
+                <Row className="mt-5 px-4">
+                  <Col sm={8}>
+                    <h3>{userData.name || "User Name"}</h3>
+                    <div className="mb-2">
+                      <strong>Bio</strong>
+                      <p>{userData.bio || "This is a user bio."}</p>
+                    </div>
+                    <div className="d-flex flex-wrap">
+                      <div className="me-4">
+                        <strong>User Sub Type</strong>
+                        <p>{userData.subType || "N/A"}</p>
+                      </div>
+                      <div className="me-4">
+                        <strong>Location</strong>
+                        <p>{userData.location || "N/A"}</p>
+                      </div>
+                      <div className="me-4">
+                        <strong>Website</strong>
+                        <p>{userData.website || "N/A"}</p>
+                      </div>
+                      <div className="me-4">
+                        <strong>Industry</strong>
+                        <p>{userData.industry || "N/A"}</p>
+                      </div>
+                      <div className="me-4">
+                        <strong>Org Size</strong>
+                        <p>{userData.orgSize || "N/A"}</p>
+                      </div>
+                    </div>
+                  </Col>
+
+                  {/* Add Profile Section Link */}
+                  <Col sm={4} className="text-end">
+                    <Link to="#" className="btn btn-link">
+                      Add profile section
+                    </Link>
+                  </Col>
+                </Row>
+
+                {/* Progress Bar */}
+                <Row className="mt-4">
+                  <Col>
+                    <ProgressBar
+                      now={60}
+                      label="60%"
+                      variant="success"
+                      animated
+                    />
+                  </Col>
+                </Row>
               </Card.Body>
             </Card>
           </Col>
         </Row>
         <Row className="px-5">
           <Col>
-						<Card>
-							<Card.Body>
-								<GenericUserInfo data={userData}/>
-							</Card.Body>
-						</Card>
-					</Col>
+            <Card>
+              <Card.Body>
+                <GenericUserInfo data={userData} />
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
         <Row className="px-5">
           <Tab.Container activeKey={activeTab}>
@@ -355,7 +339,7 @@ const MyProfile = () => {
                   <ProjectSection ongoing myProfile />
                 </Tab.Pane>
                 <Tab.Pane eventKey="accomplishments">
-                  <AccomplishmentsSection accomplishments={accomplishments}/>
+                  <AccomplishmentsSection accomplishments={accomplishments} />
                 </Tab.Pane>
               </Tab.Content>
             </Col>

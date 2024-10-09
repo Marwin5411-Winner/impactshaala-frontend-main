@@ -48,6 +48,8 @@ import Success from "../impactshaala/pages/success/success";
 import ComingSoon from "../impactshaala/pages/comingSoon/comingSoon";
 import EditMediaPost from "../impactshaala/pages/posts/edit-media-post";
 import EditPoll from "../impactshaala/pages/posts/edit-poll";
+import GiveUsAReview from "../impactshaala/pages/giveUsAReview/index";
+import RequirementForm from "../impactshaala/pages/requirementForm";
 
 
 // this routes are rendered in the default layout
@@ -87,6 +89,14 @@ export const DefaultRouter = [
   {
     path: "/project",
     element: <Project />,
+  },
+  {
+    path: "/giveusareview",
+    element: <GiveUsAReview/>
+  },
+  {
+    path: "/requirement-form",
+    element: <RequirementForm />
   },
   {
     path:"/project/:id",

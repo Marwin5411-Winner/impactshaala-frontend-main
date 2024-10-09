@@ -5,6 +5,8 @@ import user01 from "../../../../assets/images/user/1.jpg";
 function LikeModal({
   likes = []
 }) {
+
+    console.log(likes)
     const [modalShow, setModalShow] = useState(false);
     
     function handleModelClose() {
