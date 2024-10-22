@@ -199,3 +199,45 @@ export const getSavedPosts = async () => {
     return { errRes };
   }     
 }
+
+
+// Pin a post
+export const pinPost = async (postId) => {
+  try {
+    const res = await axiosAuthInstance.post('/media-post/pinned-post/pin', { postId });
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    const errRes = (err && err.response) || err.message || "Network Error";
+    return { errRes };
+  }
+};
+
+// Unpin a post
+export const unpinPost = async (postId) => {
+  try {
+    const res = await axiosAuthInstance.post('/media-post/pinned-post/unpin', { postId });
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    const errRes = (err && err.response) || err.message || "Network Error";
+    return { errRes };
+  }
+};
+
+// Get pinned posts
+export const getPinnedPosts = async () => {
+  try {
+    const res = await axiosAuthInstance.get('/media-post/pinned-post');
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    const errRes = (err && err.response) || err.message || "Network Error";
+    return { errRes };
+  }
+};
+
+
+// router.get('/pinned-post', isUserAuthenticated, getPinnedPosts);
+// router.post('/pinned-post/pin', isUserAuthenticated, pinPost);
+// router.post('/pinned-post/unpin', isUserAuthenticated, unpinPost);

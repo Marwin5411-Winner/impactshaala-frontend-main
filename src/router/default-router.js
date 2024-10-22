@@ -50,6 +50,10 @@ import EditMediaPost from "../impactshaala/pages/posts/edit-media-post";
 import EditPoll from "../impactshaala/pages/posts/edit-poll";
 import GiveUsAReview from "../impactshaala/pages/giveUsAReview/index";
 import RequirementForm from "../impactshaala/pages/requirementForm";
+import AccomplishmentForm from "../impactshaala/pages/accomplishment/add";
+import AccomplishmentPage from "../impactshaala/pages/accomplishment";
+import CollaborativeAccomplishmentForm from "../impactshaala/pages/collabAccomplishment/add";
+
 
 
 // this routes are rendered in the default layout
@@ -209,5 +213,17 @@ export const DefaultRouter = [
   {
     path: "/reset-password/:token",
     element: <ResetPassword />
+  },
+  {
+    path: "/accomplishment/add",
+    element: <AccomplishmentForm />
+  },
+  {
+    path: "/accomplishment",
+    element: <AccomplishmentPage />
+  },
+  {
+     path: "/collab-accomplishment/add",
+     element: <CollaborativeAccomplishmentForm />
   }
 ];

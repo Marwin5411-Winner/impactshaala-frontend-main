@@ -94,7 +94,7 @@ const VerticalNav = React.memo(() => {
                       </Dropdown.Item>
                       <Dropdown.Item
                         onClick={() => navigate("/posts/create-projects-initiatives-post")}>
-                        Projects & Initiatives
+                        My Opportunity/Services
                       </Dropdown.Item>
                       <Dropdown.Item
                         onClick={() => navigate("/posts/create-polls-questions-post")}>

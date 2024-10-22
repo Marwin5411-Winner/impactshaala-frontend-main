@@ -30,7 +30,7 @@ const StudentFields = ({data, errors, handleChange}) => {
 							placeholder="Enter The Name Of The Educational Institution"
 							value={data.educationalInstitution}
 							onChange={handleChange}
-							name="educationalInstitutution"
+							name="educationalInstitution"
 						/>
 						{
 							errors.educationalInstitution && (

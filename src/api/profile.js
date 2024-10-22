@@ -29,3 +29,44 @@ export const getProfile = async (id) => {
     return { errRes };
   }
 }
+
+// Send a friend request
+export const sendFriendRequest = async (receiverId) => {
+  try {
+    const res = await axiosAuthInstance.post("/community/send-friend-request", { receiverId });
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    const errRes = (err && err.respons) || err.message || "Network Error";
+    return { errRes };
+  }
+};
+
+// Get received friend requests
+export const getReceivedFriendRequests = async () => {
+  try {
+    const res = await axiosAuthInstance.get("/community/received-friend-requests");
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    console.log(err)
+    const errRes = (err && err) || err.message || "Network Error";
+    console.log(errRes)
+    return { errRes };
+  }
+};
+
+
+// Get received friend requests
+export const acceptFriendRequest = async (requestId) => {
+  try {
+    const res = await axiosAuthInstance.post("/community/accept-friend-request", { requestId });
+    const data = res && res.data;
+    return { data };
+  } catch (err) {
+    console.log(err)
+    const errRes = (err && err) || err.message || "Network Error";
+    console.log(errRes)
+    return { errRes };
+  }
+};

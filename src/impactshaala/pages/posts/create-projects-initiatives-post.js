@@ -79,7 +79,7 @@ function CreateProjectsInitiativesPost() {
             <Col>
               <Card>
                 <Card.Header>
-                  <h3>Create a Project/Initiative Post</h3>
+                  <h3>Create a My Opportunity/Services Post</h3>
                 </Card.Header>
                 <Card.Body>
                   <Form onSubmit={handleSubmit}>

@@ -200,7 +200,7 @@ function TabBar() {
         </Tab>
         <Tab
           eventKey="home"
-          title="Project / Initiative"
+          title="My Community/Services"
           className="bg-white"
         >
           {/* Category Filters as Buttons */}

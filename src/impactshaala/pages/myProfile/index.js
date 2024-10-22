@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Nav, Tab, ProgressBar } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  Nav,
+  Tab,
+  ProgressBar,
+  Dropdown,
+  ButtonGroup,
+} from "react-bootstrap";
 import Card from "../../../components/Card";
 import { Link } from "react-router-dom";
 import {
@@ -31,8 +39,14 @@ import defaultUser from "../../../assets/images/defaultUser.png";
 import { listMyMediaPosts } from "../../../api/mediaPost";
 import { getMyPolls } from "../../../api/polls";
 import GenericUserInfo from "../../../components/GenericUserInfo";
-import AccomplishmentsSection from "../../../components/accomplishments/AccomplishmentsSection";
 import { getMyAccomplishments } from "../../../api/accomplishments";
+
+import ReviewsTabs from "./components/ReviewTab";
+import HexagonCard from "./components/HexagonCard";
+import MyCommunitySection from "./components/MyCommunitySec";
+import ProfileSectionDropdown from "./components/ProfileSelection";
+
+
 
 const MyProfile = () => {
   const location = useLocation();
@@ -41,29 +55,37 @@ const MyProfile = () => {
   const [polls, setPolls] = useState([]);
   const [accomplishments, setAccomplishments] = useState([]);
   const [activeTab, setActiveTab] = useState("about");
+  const [showSections, setShowSections] = useState(false); // State to toggle sections
+  const [communityMembers, setCommunityMembers] = useState("");
+  const [showAllIndustries, setShowAllIndustries] = useState(false);
+
+  const toggleShowAllIndustries = () => {
+    setShowAllIndustries(!showAllIndustries);
+  };
 
   const fetchMyProfile = async () => {
     const profile = await getMyProfile();
+    console.log(profile.data.data);
     setUserData(profile.data.data);
   };
 
-  const fetchMediaPosts = async () => {
-    const resp = await listMyMediaPosts();
-    if (resp.errRes) {
-      if (resp.errRes.response) {
-        window.alert(resp.errRes.response.data.message);
-        return;
-      }
-      if (resp.errRes.message) {
-        window.alert(resp.errRes.message);
-        return;
-      }
-      return;
-    }
-    if (resp.data.success) {
-      setMediaPosts(resp.data.data);
-    }
-  };
+  // const fetchMediaPosts = async () => {
+  //   const resp = await listMyMediaPosts();
+  //   if (resp.errRes) {
+  //     if (resp.errRes.response) {
+  //       window.alert(resp.errRes.response.data.message);
+  //       return;
+  //     }
+  //     if (resp.errRes.message) {
+  //       window.alert(resp.errRes.message);
+  //       return;
+  //     }
+  //     return;
+  //   }
+  //   if (resp.data.success) {
+  //     setMediaPosts(resp.data.data);
+  //   }
+  // };
 
   const fetchMyPolls = async () => {
     const resp = await getMyPolls();
@@ -103,28 +125,32 @@ const MyProfile = () => {
     }
   };
 
-  const handleDeletePost = async (id) => {
-    const resp = await deleteMediaPost(id);
-    if (resp.errRes) {
-      if (resp.errRes.response) {
-        window.alert(resp.errRes.response.data.message);
-        return;
-      }
-      if (resp.errRes.message) {
-        window.alert(resp.errRes.message);
-        return;
-      }
-      console.log(resp);
-      return;
-    }
-    if (resp.data.success) {
-      fetchMediaPosts();
-    }
+  // const handleDeletePost = async (id) => {
+  //   const resp = await deleteMediaPost(id);
+  //   if (resp.errRes) {
+  //     if (resp.errRes.response) {
+  //       window.alert(resp.errRes.response.data.message);
+  //       return;
+  //     }
+  //     if (resp.errRes.message) {
+  //       window.alert(resp.errRes.message);
+  //       return;
+  //     }
+
+  //     return;
+  //   }
+  //   if (resp.data.success) {
+  //     fetchMediaPosts();
+  //   }
+  // };
+
+  const handleToggleSections = () => {
+    setShowSections(!showSections); // Toggle the visibility of the sections
   };
 
   useEffect(() => {
     fetchMyProfile();
-    fetchMediaPosts();
+    // fetchMediaPosts();
     fetchMyPolls();
     fetchMyAccomplishments();
   }, []);
@@ -194,6 +220,8 @@ const MyProfile = () => {
                         />
                       </div>
                     </div>
+
+                    {/* Credibility Board */}
                   </div>
                 </div>
 
@@ -201,14 +229,16 @@ const MyProfile = () => {
                 <Row className="mt-5 px-4">
                   <Col sm={8}>
                     <h3>{userData.name || "User Name"}</h3>
+
                     <div className="mb-2">
                       <strong>Bio</strong>
-                      <p>{userData.bio || "This is a user bio."}</p>
+                      <p>{userData.bio || "N/A"}</p>
                     </div>
+
                     <div className="d-flex flex-wrap">
                       <div className="me-4">
                         <strong>User Sub Type</strong>
-                        <p>{userData.subType || "N/A"}</p>
+                        <p>{userData.userType1 || "N/A"}</p>
                       </div>
                       <div className="me-4">
                         <strong>Location</strong>
@@ -218,132 +248,112 @@ const MyProfile = () => {
                         <strong>Website</strong>
                         <p>{userData.website || "N/A"}</p>
                       </div>
-                      <div className="me-4">
-                        <strong>Industry</strong>
-                        <p>{userData.industry || "N/A"}</p>
-                      </div>
-                      <div className="me-4">
-                        <strong>Org Size</strong>
-                        <p>{userData.orgSize || "N/A"}</p>
-                      </div>
+
+                      {/* Conditional rendering based on userType1 */}
+                      {userData.userType1 === "Working Professional" && (
+                        <>
+                          <div className="me-4">
+                            <strong>Domain</strong>
+                            <p>{userData.userType3?.[0] || "N/A"}</p>{" "}
+                            {/* Display first industry */}
+                            {userData.userType3?.length > 1 && (
+                              <button
+                                className="btn btn-link p-0"
+                                onClick={toggleShowAllIndustries}
+                              >
+                                {showAllIndustries ? "Show Less" : "More"}
+                              </button>
+                            )}
+                            {showAllIndustries && (
+                              <div>
+                                <strong>All Domains:</strong>
+                                <ul>
+                                  {userData.industry.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                            {/* Domain replaces Industry */}
+                          </div>
+                          <div className="me-4">
+                            <strong>Years of Work Experience</strong>
+                            <p>{userData.yearsOfExperience || "N/A"}</p>
+                          </div>
+                          <div className="me-4">
+                            <strong>User Profession</strong>
+                            <p>{userData.profession || "N/A"}</p>
+                          </div>
+                        </>
+                      )}
+
+                      {userData.userType1 === "Student" && (
+                        <>
+                          <div className="me-4">
+                            <strong>Educational Institutions</strong>
+                            <p>{userData.educationalInstitution || "N/A"}</p>
+                          </div>
+                          <div className="me-4">
+                            <strong>Level of Education</strong>
+                            <p>{userData.highestEducation || "N/A"}</p>
+                          </div>
+                        </>
+                      )}
+
+                      {/* Default content for other user types */}
+                      {userData.userType1 !== "Working Professional" &&
+                        userData.userType1 !== "Student" && (
+                          <>
+                            <div className="me-4">
+                              <strong>Industry</strong>
+                              <p>{userData.industry || "N/A"}</p>
+                            </div>
+                            <div className="me-4">
+                              <strong>Org Size</strong>
+                              <p>{userData.orgSize || "N/A"}</p>
+                            </div>
+                          </>
+                        )}
                     </div>
                   </Col>
-
-                  {/* Add Profile Section Link */}
-                  <Col sm={4} className="text-end">
-                    <Link to="#" className="btn btn-link">
-                      Add profile section
-                    </Link>
-                  </Col>
-                </Row>
-
-                {/* Progress Bar */}
-                <Row className="mt-4">
-                  <Col>
-                    <ProgressBar
-                      now={60}
-                      label="60%"
-                      variant="success"
-                      animated
-                    />
-                  </Col>
                 </Row>
               </Card.Body>
             </Card>
+
+            <Row className="mt-4 px-4">
+              <Col sm={8}>
+                {/* User Description */}
+                <Card className="p-3" style={{ backgroundColor: "#e0e0e0" }}>
+                  <strong>User Description</strong>
+                  <p className="mb-0">
+                    {userData.description || "No description available"}
+                  </p>
+                </Card>
+              </Col>
+
+              {/* Add Profile Section Dropdown */}
+              <Col
+                sm={4}
+                className="justify-content-end"
+              >
+                <ProfileSectionDropdown />
+              </Col>
+            </Row>
+
+            <Row className="mt-4 px-4">
+              {/* Left Section: My Community */}
+              <MyCommunitySection />
+
+              {/* Right Section: Current Projects/Activities */}
+              <Col sm={6} className="d-flex justify-content-end">
+                <Card className="p-3" style={{ border: "2px solid black" }}>
+                  <strong>Current Projects/Activities</strong>
+                </Card>
+              </Col>
+            </Row>
+
+            <ReviewsTabs profile={userData} post={mediaPosts}/>
           </Col>
-        </Row>
-        <Row className="px-5">
-          <Col>
-            <Card>
-              <Card.Body>
-                <GenericUserInfo data={userData} />
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-        <Row className="px-5">
-          <Tab.Container activeKey={activeTab}>
-            <Card className="p-0">
-              <Card.Body className="p-0">
-                <div className="user-tabing">
-                  <Nav
-                    as="ul"
-                    variant="pills"
-                    className="d-flex align-items-center justify-content-center profile-feed-items p-0 m-0"
-                  >
-                    <Nav.Item as="li" className="col-12 col-sm-3 p-0">
-                      <Nav.Link
-                        href="#about-tab"
-                        eventKey="about"
-                        role="button"
-                        className="text-center p-3"
-                        onClick={() => setActiveTab("about")}
-                      >
-                        About
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li" className=" col-12 col-sm-3 p-0">
-                      <Nav.Link
-                        href="#posts-tab"
-                        eventKey="posts"
-                        role="button"
-                        className="text-center p-3"
-                        onClick={() => setActiveTab("posts")}
-                      >
-                        Posts
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li" className="col-12 col-sm-3 p-0">
-                      <Nav.Link
-                        href="#projects-tab"
-                        eventKey="projects"
-                        role="button"
-                        className="text-center p-3"
-                        onClick={() => setActiveTab("projects")}
-                      >
-                        Ongoing Projects
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li" className="col-12 col-sm-3 p-0">
-                      <Nav.Link
-                        href="#accomplishments-tab"
-                        eventKey="accomplishments"
-                        role="button"
-                        className="text-center p-3"
-                        onClick={() => setActiveTab("accomplishments")}
-                      >
-                        Accomplishments
-                      </Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </div>
-              </Card.Body>
-            </Card>
-            <Col sm={12}>
-              <Tab.Content>
-                <Tab.Pane eventKey="about">
-                  <AboutSection data={userData} />
-                </Tab.Pane>
-                <Tab.Pane eventKey="posts">
-                  <PostsSection
-                    myProfile
-                    mediaPosts={mediaPosts}
-                    user={userData}
-                    handleDeletePost={handleDeletePost}
-                    polls={polls}
-                    setPolls={setPolls}
-                    setUser={setUserData}
-                  />
-                </Tab.Pane>
-                <Tab.Pane eventKey="projects">
-                  <ProjectSection ongoing myProfile />
-                </Tab.Pane>
-                <Tab.Pane eventKey="accomplishments">
-                  <AccomplishmentsSection accomplishments={accomplishments} />
-                </Tab.Pane>
-              </Tab.Content>
-            </Col>
-          </Tab.Container>
         </Row>
       </PageTemplate2>
     </>

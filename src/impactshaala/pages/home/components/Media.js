@@ -1,5 +1,5 @@
 import { Button, Card, Carousel, Col, Dropdown } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LikeComponent from "./LikeComponent";
 
 import Comment from "./Comment";
@@ -17,6 +17,8 @@ import {
   saveMediaPost,
   unlikeMediaPost,
   unsaveMediaPost,
+  pinPost,
+  unpinPost,
 } from "../../../../api/mediaPost";
 import { deleteMediaPostComment } from "../../../../api/mediaPost";
 import ConfirmationPopup from "../../../../components/ConfirmationPopup";
@@ -34,6 +36,7 @@ function Media({
   const [clicked, setClicked] = useState(false);
   const [post, setPost] = useState(userPost);
   const [comment, setComment] = useState("");
+  const [isPinned, setIsPinned] = useState(false); // State to track pin status
 
   const handleMoreComments = () => {
     if (commentNumber < post.comments.length)
@@ -43,6 +46,30 @@ function Media({
   useState(() => {
     setPost(userPost);
   }, [userPost]);
+
+  useEffect(() => {
+    console.log("Mediapost User logg", user)
+    setPost(userPost);
+    setIsPinned(user.pinnedPosts && user.pinnedPosts.includes(post._id));
+  }, [userPost, user.pinnedPosts]);
+
+  const handlePin = async () => {
+    const { data, errRes } = await pinPost(post._id);
+    if (errRes) {
+      console.log(errRes);
+    }
+
+    setIsPinned(true);
+  };
+
+  const handleUnpin = async () => {
+    const { data, errRes } = await unpinPost(post._id);
+    if (errRes) {
+      console.log(errRes);
+    }
+
+    setIsPinned(false);
+  };
 
   const createdAt = post.createdAt
     ? new Date(post.createdAt).toLocaleDateString("en-IN", {
@@ -67,7 +94,6 @@ function Media({
         window.alert(resp.errRes.message);
         return;
       }
-      console.log(resp);
       return;
     }
     if (resp.data.success) {
@@ -280,6 +306,35 @@ function Media({
                             </div>
                           </div>
                         </Dropdown.Item>
+                        {user._id === post.userId._id && (
+                          <>
+                            {!isPinned ? (
+                              <Dropdown.Item onClick={handlePin}>
+                                <div className="d-flex align-items-top">
+                                  <i className="ri-pushpin-line h4"></i>
+                                  <div className="data ms-2">
+                                    <h6>Pin Post</h6>
+                                    <p className="mb-0">
+                                      Pin this post to profile
+                                    </p>
+                                  </div>
+                                </div>
+                              </Dropdown.Item>
+                            ) : (
+                              <Dropdown.Item onClick={handleUnpin}>
+                                <div className="d-flex align-items-top">
+                                  <i className="ri-pushpin-fill h4"></i>
+                                  <div className="data ms-2">
+                                    <h6>Unpin Post</h6>
+                                    <p className="mb-0">
+                                      Unpin this post from profile
+                                    </p>
+                                  </div>
+                                </div>
+                              </Dropdown.Item>
+                            )}
+                          </>
+                        )}
                         {user && user._id === post.userId._id && (
                           <Dropdown.Item
                             className=" p-3"

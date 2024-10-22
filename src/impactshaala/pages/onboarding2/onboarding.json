@@ -265,7 +265,7 @@
               ]
             },
             {
-              "name": "For-Profit Companies: Businesses operated with the goal of making profits",
+              "name": "For-Profit Companies",
               "key": "usertype3",
               "label": "Select your Industry",
               "inputType": "select",
@@ -464,7 +464,7 @@
               ]
             },
             {
-              "name": "Talent Showcase Platform",
+              "name": "Talent Learning/Showcase Platform",
               "key": "usertype3",
               "label": "Select your Organization Type",
               "inputType": "select",
