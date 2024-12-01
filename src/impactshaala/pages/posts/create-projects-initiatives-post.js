@@ -19,7 +19,7 @@ import Step2 from "./createProject/step-2";
 import Step3 from "./createProject/step-3";
 import PreviewSubmit from "./createProject/previewSubmit";
 
-const post1 = ["Education", "Social Impact", "Live Events", "Others"];
+const post1 = ["Education", "Social Impact", "Live Events", "Startup & Social Funding", "Talent Master","Others"];
 
 // Main Component
 function CreateProjectsInitiativesPost() {

@@ -234,7 +234,7 @@ function Step1({ formData, handleChange, nextStep, setFormData }) {
       {/* Specify Keyword */}
       <Form.Group as={Row} className="mb-3">
         <Form.Label column sm={3}>
-          Clearly specify the selected keyword
+          Clearly specify the selected keyword furthur to give more clarify
         </Form.Label>
         <Col sm={9}>
           <Form.Control

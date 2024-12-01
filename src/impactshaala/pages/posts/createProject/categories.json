@@ -666,5 +666,270 @@
         ]
       }
     ]
+  },
+  {
+    "category": "Startup & Social Funding",
+    "subcategories": [
+      {
+        "name": "Startup",
+        "subtypes": [
+          {
+            "name": "Partner and Team member",
+            "keyword": "Finding and collaborating with business partners and team members to build and grow ventures."
+          },
+          {
+            "name": "Mentor",
+            "keyword": "Receiving guidance and advice from experienced mentors to navigate entrepreneurial challenges."
+          },
+          {
+            "name": "Resource Acess",
+            "keyword": "Providing access to resources such as funding, tools, and networks necessary for business development."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Social Funding",
+        "subtypes": [
+          {
+            "name": "Startup Funding",
+            "keyword": "Securing financial resources and investment to start and grow new business ventures."
+          },
+          {
+            "name": "CSR Grants",
+            "keyword": "Securing financial resources and investment to start and grow new business ventures."
+          },
+          {
+            "name": "Others",
+            "keyword": ""
+          }
+        ]
+      },
+      {
+        "name": "Others"
+      }
+    ]
+  },
+  {
+    "category": "Talent Master",
+    "subcategories": [
+      {
+        "name": "Talent exploration & Learning",
+        "subtypes": [
+          {
+            "name": "Creative Arts",
+            "keyword": "Engaging in artistic activities such as painting, drawing, and sculpture."
+          },
+          {
+            "name": "Music and Performing Arts",
+            "keyword": "Participating in music, theater, dance, and other performance-based activities."
+          },
+          {
+            "name": "Sports and Physical Activities",
+            "keyword": "Involving in various sports and physical exercises to stay active and healthy."
+          },
+          {
+            "name": "Language Learning",
+            "keyword": "Learning new languages and improving language skills."
+          },
+          {
+            "name": "DIY Projects",
+            "keyword": "Undertaking do-it-yourself projects to create or repair items."
+          },
+          {
+            "name": "Photography and Videography",
+            "keyword": "Learning and practicing photography and video-making skills."
+          },
+          {
+            "name": "Cooking and Culinary Arts",
+            "keyword": "Exploring the art of cooking and baking, and learning new culinary skills."
+          },
+          {
+            "name": "Gardening and Nature Exploration",
+            "keyword": "Engaging in gardening and exploring nature and wildlife."
+          },
+          {
+            "name": "Writing and Literature",
+            "keyword": "Developing writing skills and exploring literary works."
+          },
+          {
+            "name": "Crafts and Handmade Creations",
+            "keyword": "Creating handmade crafts and art pieces."
+          },
+          {
+            "name": "Science and Technology Exploration",
+            "keyword": "Investigating scientific concepts and exploring technological advancements."
+          },
+          {
+            "name": "Mindfulness and Meditation",
+            "keyword": "Practicing mindfulness and meditation for mental well-being."
+          },
+          {
+            "name": "Cultural Exploration",
+            "keyword": "Learning about and experiencing different cultures and traditions."
+          },
+          {
+            "name": "Health and Fitness",
+            "keyword": "Engaging in activities that promote physical health and fitness."
+          },
+          {
+            "name": "Gaming and E-Sports",
+            "keyword": "Participating in video games and competitive e-sports."
+          },
+          {
+            "name": "Astronomy and Space Exploration",
+            "keyword": "Exploring the field of astronomy and studying space."
+          },
+          {
+            "name": "Historical Reenactments and Study",
+            "keyword": "Participating in historical reenactments and studying history."
+          },
+          {
+            "name": "Martial Arts and Self-Defense",
+            "keyword": "Learning martial arts and self-defense techniques."
+          },
+          {
+            "name": "Fashion Design and Styling",
+            "keyword": "Exploring fashion design, styling, and clothing creation."
+          },
+          {
+            "name": "Aquatic Sports and Activities",
+            "keyword": "Participating in water-based sports and activities."
+          },
+          {
+            "name": "Public Speaking and Debate",
+            "keyword": "Developing public speaking and debate skills."
+          },
+          {
+            "name": "Others",
+            "keyword": "Type"
+          }
+        ]
+      },
+      {
+        "name": "Showcase your Talent",
+        "subtypes": [
+          {
+            "name": "Art Exhibitions",
+            "keyword": "Showcasing artistic works such as paintings, drawings, and sculptures."
+          },
+          {
+            "name": "Music Performances",
+            "keyword": "Performing musical pieces in front of an audience."
+          },
+          {
+            "name": "Dance Performances",
+            "keyword": "Showcasing dance routines and performances."
+          },
+          {
+            "name": "Sports Competitions",
+            "keyword": "Participating in competitive sports events."
+          },
+          {
+            "name": "Language Contests",
+            "keyword": "Competing in events that test language skills and proficiency."
+          },
+          {
+            "name": "DIY Project Showcases",
+            "keyword": "Displaying do-it-yourself projects and creations."
+          },
+          {
+            "name": "Travel and Adventure Presentations",
+            "keyword": "Sharing experiences and stories from travel and adventure activities."
+          },
+          {
+            "name": "Photography Exhibits",
+            "keyword": "Displaying photographic works in a gallery or exhibition setting."
+          },
+          {
+            "name": "Film Festivals",
+            "keyword": "Showcasing films and video productions in a festival format."
+          },
+          {
+            "name": "Cooking Competitions",
+            "keyword": "Competing in culinary challenges and showcasing cooking skills."
+          },
+          {
+            "name": "Gardening Shows",
+            "keyword": "Presenting garden designs and horticultural projects."
+          },
+          {
+            "name": "Writing Contests",
+            "keyword": "Competing in literary contests to showcase writing talent."
+          },
+          {
+            "name": "Craft Fairs",
+            "keyword": "Displaying handmade crafts and artisan creations."
+          },
+          {
+            "name": "Science Fairs",
+            "keyword": "Presenting scientific projects and experiments."
+          },
+          {
+            "name": "Technology Demonstrations",
+            "keyword": "Showcasing technological innovations and projects."
+          },
+          {
+            "name": "Mindfulness and Meditation Workshops",
+            "keyword": "Conducting sessions to demonstrate mindfulness and meditation practices."
+          },
+          {
+            "name": "Volunteer Recognition Events",
+            "keyword": "Honoring and showcasing the contributions of volunteers."
+          },
+          {
+            "name": "Entrepreneurship Pitch Events",
+            "keyword": "Presenting business ideas and pitches to potential investors and audiences."
+          },
+          {
+            "name": "Skill Development Workshops",
+            "keyword": "Hosting workshops to develop and showcase specific skills."
+          },
+          {
+            "name": "Cultural Festivals",
+            "keyword": "Celebrating and showcasing various cultural traditions and practices."
+          },
+          {
+            "name": "Health and Fitness Challenges",
+            "keyword": "Participating in events that promote physical health and fitness."
+          },
+          {
+            "name": "Gaming Tournaments",
+            "keyword": "Competing in video game and e-sports events."
+          },
+          {
+            "name": "Astronomy Exhibits",
+            "keyword": "Displaying projects and findings related to astronomy and space exploration."
+          },
+          {
+            "name": "Historical Reenactments",
+            "keyword": "Participating in events that recreate historical events and periods."
+          },
+          {
+            "name": "Martial Arts Demonstrations",
+            "keyword": "Performing martial arts techniques and routines."
+          },
+          {
+            "name": "Fashion Shows",
+            "keyword": "Showcasing fashion designs and clothing creations on the runway."
+          },
+          {
+            "name": "Aquatic Sports Competitions",
+            "keyword": "Competing in water-based sports and activities."
+          },
+          {
+            "name": "Public Speaking Events",
+            "keyword": "Presenting speeches and participating in public speaking contests."
+          },
+          {
+            "name": "Others",
+            "keyword": "Type"
+          }
+        ]
+      }
+    ]
   }
 ]

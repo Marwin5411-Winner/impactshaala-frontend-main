@@ -45,18 +45,18 @@
               ]
             },
             {
-              "name": "Government Health Services",
+              "name": "Government Health Service",
               "key": "usertype3",
               "label": "Select your Health Facility Type",
               "inputType": "select",
               "options": [
                 { "name": "Government Hospital" },
-                { "name": "Community Health Center" },
+                { "name": "Government Community Health Center" },
                 { "name": "Government Clinic" },
                 { "name": "Government Health Department" },
-                { "name": "Mental Health Facility" },
-                { "name": "Research Institute" },
-                { "name": "Specialized Government Healthcare Program" },
+                { "name": "Government Mental Facility" },
+                { "name": "Government Research Institute" },
+                { "name": "Government Specialized Healthcare Programs" },
                 {
                   "name": "Others",
                   "label": "Enter your Health Facility Type",
@@ -86,18 +86,18 @@
               ]
             },
             {
-              "name": "Government Utilities",
+              "name": "Government Utility",
               "key": "usertype3",
               "label": "Select your Utility Type",
               "inputType": "select",
               "options": [
-                { "name": "Water Supply Service" },
-                { "name": "Electricity Provider" },
-                { "name": "Natural Gas Service" },
-                { "name": "Waste Management Service" },
-                { "name": "Government Transit System" },
-                { "name": "Sewage Treatment" },
-                { "name": "Telecommunication Service" },
+                { "name": "Government Water Supply Service" },
+                { "name": "Government Electricity Provider" },
+                { "name": "Government Natural Gas Service" },
+                { "name": "Government Waste Management Service" },
+                { "name": "Government Public Transit System" },
+                { "name": "Government Sewage Treatment" },
+                { "name": "Government Telecommunication Service" },
                 {
                   "name": "Others",
                   "label": "Enter your Utility Type",
@@ -106,39 +106,21 @@
               ]
             },
             {
-              "name": "Government Cultural Institutions",
-              "key": "usertype3",
-              "label": "Select your Institution Type",
-              "inputType": "select",
-              "options": [
-                { "name": "Government Museum" },
-                { "name": "National and Government Library" },
-                { "name": "Historical Site and Monument" },
-                { "name": "Government Art Gallery" },
-                { "name": "Cultural Center" },
-                { "name": "Government Theater and Performing Art Venue" },
-                { "name": "Archive" },
-                {
-                  "name": "Others",
-                  "label": "Enter your Institution Type",
-                  "inputType": "input"
-                }
-              ]
-            },
-            {
-              "name": "Social Welfare Services: Agencies providing social welfare and benefits",
+              "name": "Government Social Welfare Service",
               "key": "usertype3",
               "label": "Select your Service Type",
               "inputType": "select",
               "options": [
-                { "name": "Child and Family Service" },
-                { "name": "Unemployment Benefit and Job Training Program" },
-                { "name": "Government Housing" },
-                { "name": "Social Security Administration" },
-                { "name": "Health and Human Service" },
-                { "name": "Elderly Care Service" },
-                { "name": "Disability Service" },
-                { "name": "Defense and Military" },
+                { "name": "Government Child and Family Service" },
+                {
+                  "name": "Government Unemployment Benefit and Job Training Program"
+                },
+                { "name": "Government Public Housing" },
+                { "name": "Government Social Security Administration" },
+                { "name": "Government Health and Human Service" },
+                { "name": "Government Elderly Care Service" },
+                { "name": "Government Disability Service" },
+                { "name": "Government Defense and Military" },
                 {
                   "name": "Others",
                   "label": "Enter your Service Type",
@@ -147,7 +129,7 @@
               ]
             },
             {
-              "name": "Educational Field Trip Venue",
+              "name": "Government Educational Field Trip Venue",
               "inputType": "multi-field",
               "key": "usertype3",
               "fields": [
@@ -172,28 +154,33 @@
                       "inputType": "input"
                     }
                   ]
-                },
-                {
-                  "label": "Select the nature of entity",
-                  "key": "usertype5",
-                  "inputType": "select",
-                  "options": [
-                    { "name": "Non-Profit Educational Entity" },
-                    { "name": "Government Operated Entity" },
-                    { "name": "Private Organization" }
-                  ]
                 }
               ]
             },
             {
-              "name": "Startup Support Organization",
+              "name": "Government Startup Support Organization",
               "key": "usertype3",
-              "label": "Select your Organization Type",
+              "label": "Select what best describes you",
               "inputType": "select",
               "options": [
-                { "name": "Startup Incubation" },
-                { "name": "Startup Accelerator" },
-                { "name": "Venture Capital" },
+                {
+                  "name": "Startup Incubation",
+                  "label": "Mention your offerings in keywords",
+                  "key": "usertype4",
+                  "inputType": "input"
+                },
+                {
+                  "name": "Startup Accelerator",
+                  "label": "Mention your offerings in keywords",
+                  "key": "usertype4",
+                  "inputType": "input"
+                },
+                {
+                  "name": "Venture Capital",
+                  "label": "Mention your offerings in keywords",
+                  "key": "usertype4",
+                  "inputType": "input"
+                },
                 {
                   "name": "Others",
                   "label": "Enter your Institution Type",
@@ -217,17 +204,11 @@
               "options": [
                 { "name": "Secondary School (Grade 1 to 10)" },
                 { "name": "Senior Secondary School/College (Grade 11 & 12)" },
-                { "name": "Higher Education (University)" },
-                { "name": "Vocational and Technical Training Institute" },
-                {
-                  "name": "Coaching Center: Offer specialized tutoring for specific exam or subject."
-                },
-                {
-                  "name": "Online Education Platform: Provide course and learning resource through digital platform."
-                },
-                {
-                  "name": "Specialized Institution: Focus on specific field like art, music, or sport."
-                },
+                { "name": "K-12 School" },
+                { "name": "Higher Education Institute (Undergrad & Postgrad)" },
+                { "name": "Vocational & Technical Training Institute" },
+                { "name": "Coaching Centre (Specific Exam & Subjects)" },
+                { "name": "Specialized Institutions (Music, Art, Sports etc)" },
                 {
                   "name": "Others",
                   "label": "Enter your Institution Type",
@@ -281,27 +262,27 @@
                 { "name": "Chemicals" },
                 { "name": "Consumer Electronics" },
                 { "name": "Construction" },
-                { "name": "Consulting Services (Management, Environmental)" },
+                { "name": "Consulting Service (Management, Environmental)" },
                 { "name": "Cybersecurity" },
                 { "name": "Defense Manufacturing" },
                 { "name": "Digital Marketing and Advertising" },
                 { "name": "Education and EdTech" },
                 {
-                  "name": "Energy & Utilities (Electric, Water, and Waste Management)"
+                  "name": "Energy & Utility (Electric, Water, and Waste Management)"
                 },
                 { "name": "Entertainment & Media" },
-                { "name": "Environmental Services and Sustainability" },
+                { "name": "Environmental Service and Sustainability" },
                 { "name": "Fashion & Apparel" },
-                { "name": "Fintech and Financial Services" },
+                { "name": "Fintech and Financial Service" },
                 { "name": "Food and Beverage" },
-                { "name": "Healthcare Services" },
+                { "name": "Healthcare Service" },
                 { "name": "Hospitality & Tourism" },
                 { "name": "Human Resources & Staffing" },
                 {
                   "name": "Information Technology (IT) and Business Process Management (BPM)"
                 },
                 { "name": "Insurance" },
-                { "name": "Legal Services" },
+                { "name": "Legal Service" },
                 { "name": "Logistics & Supply Chain" },
                 {
                   "name": "Manufacturing (Specify subtype, e.g., Electronics, Consumer Goods)"
@@ -314,14 +295,14 @@
                 { "name": "Packaging" },
                 { "name": "Pharmaceuticals" },
                 { "name": "Printing & Publishing" },
-                { "name": "Professional Services (Legal, Accounting)" },
+                { "name": "Professional Service (Legal, Accounting)" },
                 { "name": "Public Relations" },
                 { "name": "Real Estate" },
                 { "name": "Retail & E-commerce" },
                 { "name": "Security & Investigations" },
                 { "name": "Software Development" },
-                { "name": "Sports Management and Recreational Services" },
-                { "name": "Technology Services" },
+                { "name": "Sports Management and Recreational Service" },
+                { "name": "Technology Service" },
                 { "name": "Telecommunications" },
                 { "name": "Textiles and Apparel" },
                 { "name": "Transportation and Logistics" },
@@ -340,7 +321,7 @@
               "inputType": "multi-field",
               "fields": [
                 {
-                  "label": "Operation Radius",
+                  "label": "Which type of NPO are you?",
                   "key": "usertype3",
                   "inputType": "select",
                   "options": [
@@ -355,21 +336,19 @@
                   ]
                 },
                 {
-                  "label": "Operational Functionality",
+                  "label": "Mention your Organization's main cause in keywords",
                   "key": "usertype4",
-                  "inputType": "multi-select",
-                  "options": [
-                    { "name": "Charitable Trusts" },
-                    { "name": "Advocacy NGO" },
-                    { "name": "Service-oriented NGO" },
-                    { "name": "Participatory NGO" },
-                    { "name": "Empowering NGO" },
-                    {
-                      "name": "Others",
-                      "inputType": "input",
-                      "label": "Enter your Operational Functionality"
-                    }
-                  ]
+                  "inputType": "input"
+                },
+                {
+                  "name": "Others",
+                  "label": "List your services using keyword",
+                  "inputType": "input"
+                },
+                {
+                  "name": "Others",
+                  "label": "List the location where you operate",
+                  "inputType": "input"
                 },
                 {
                   "label": "Choose your focus area from the list of 17 SDGs",
@@ -421,7 +400,7 @@
                     { "name": "Museum" },
                     { "name": "Science Center" },
                     { "name": "Historical Sites and Monument" },
-                    { "name": "Theme Parks and Amusement Park" },
+                    { "name": "Theme & Amusement Park" },
                     { "name": "Art Galler" },
                     { "name": "Theater" },
                     { "name": "Cinema" },
@@ -449,16 +428,26 @@
             },
             {
               "name": "Startup Support Organization",
-              "key": "usertype3",
-              "label": "Select your Organization Type",
-              "inputType": "select",
-              "options": [
-                { "name": "Startup Incubation" },
-                { "name": "Startup Accelerator" },
-                { "name": "Venture Capital" },
+              "inputType": "multi-field",
+              "fields": [
                 {
-                  "name": "Others",
-                  "label": "Enter your Institution Type",
+                  "label": "Select what best describes you",
+                  "inputType": "select",
+                  "key": "usertype3",
+                  "options": [
+                    { "name": "Startup Incubation" },
+                    { "name": "Startup Accelerator" },
+                    { "name": "Venture Capital" },
+                    {
+                      "name": "Others",
+                      "label": "Enter your Institution Type",
+                      "inputType": "input"
+                    }
+                  ]
+                },
+                {
+                  "key": "usertype4",
+                  "label": "Mention your offerings in keywords",
                   "inputType": "input"
                 }
               ]
@@ -466,7 +455,7 @@
             {
               "name": "Talent Learning/Showcase Platform",
               "key": "usertype3",
-              "label": "Select your Organization Type",
+              "label": "Select the talents that can be showcased and learnt on your platform",
               "inputType": "select",
               "options": [
                 { "name": "Art Exhibitions" },
@@ -507,7 +496,7 @@
           ]
         },
         {
-          "name": "International Organizations",
+          "name": "International Organization",
           "key": "usertype2",
           "label": "Select your Organization Type",
           "inputType": "select",
@@ -537,10 +526,48 @@
     },
     {
       "name": "INDIVIDUAL",
-      "label": "Select A Role",
+      "label": "Select the nature that best suits you",
       "key": "usertype1",
       "inputType": "select",
       "options": [
+        {
+          "name": "Student",
+          "label": "Choose your education level",
+          "key": "usertype2",
+          "inputType": "select",
+          "options": [
+            {
+              "name": "Secondary School (Grade 1 to 10)",
+              "label": "Provide name of your Educational Institution",
+              "key": "usertype3",
+              "inputType": "input"
+            },
+            {
+              "name": "Senior Secondary School/College (Grade 11 & 12)",
+              "label": "Provide name of your Educational Institution",
+              "key": "usertype3",
+              "inputType": "input"
+            },
+            {
+              "name": "Undergraduate College",
+              "label": "Provide name of your Educational Institution",
+              "key": "usertype3",
+              "inputType": "input"
+            },
+            {
+              "name": "Postgraduate College",
+              "label": "Provide name of your Educational Institution",
+              "key": "usertype3",
+              "inputType": "input"
+            },
+            {
+              "name": "Others",
+              "label": "Provide name of your Educational Institution",
+              "key": "usertype3",
+              "inputType": "input"
+            }
+          ]
+        },
         {
           "name": "Working Professional",
           "label": "Select Your Work Department",
@@ -754,7 +781,7 @@
                   ]
                 },
                 {
-                  "name": "Chemicals",
+                  "name": "Chemical",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -779,7 +806,7 @@
                   ]
                 },
                 {
-                  "name": "Consumer Electronics",
+                  "name": "Consumer Electronic",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -829,7 +856,7 @@
                   ]
                 },
                 {
-                  "name": "Consulting Services (Management, Environmental)",
+                  "name": "Consulting Service (Management, Environmental)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -954,7 +981,7 @@
                   ]
                 },
                 {
-                  "name": "Energy & Utilities (Electric, Water, and Waste Management)",
+                  "name": "Energy & Utility (Electric, Water, and Waste Management)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1004,7 +1031,7 @@
                   ]
                 },
                 {
-                  "name": "Environmental Services and Sustainability",
+                  "name": "Environmental Service and Sustainability",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1054,7 +1081,7 @@
                   ]
                 },
                 {
-                  "name": "Fintech and Financial Services",
+                  "name": "Fintech and Financial Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1104,7 +1131,7 @@
                   ]
                 },
                 {
-                  "name": "Healthcare Services",
+                  "name": "Healthcare Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1154,7 +1181,7 @@
                   ]
                 },
                 {
-                  "name": "Human Resources & Staffing",
+                  "name": "Human Resource & Staffing",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1229,7 +1256,7 @@
                   ]
                 },
                 {
-                  "name": "Legal Services",
+                  "name": "Legal Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1254,7 +1281,7 @@
                   ]
                 },
                 {
-                  "name": "Logistics & Supply Chain",
+                  "name": "Logistic & Supply Chain",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1304,7 +1331,7 @@
                   ]
                 },
                 {
-                  "name": "Marine & Shipping (Port Operations)",
+                  "name": "Marine & Shipping (Port Operation)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1354,7 +1381,7 @@
                   ]
                 },
                 {
-                  "name": "Medical Devices",
+                  "name": "Medical Device",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1379,7 +1406,7 @@
                   ]
                 },
                 {
-                  "name": "Metals and Mining",
+                  "name": "Metal and Mining",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1454,7 +1481,7 @@
                   ]
                 },
                 {
-                  "name": "Pharmaceuticals",
+                  "name": "Pharmaceutical",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1504,7 +1531,7 @@
                   ]
                 },
                 {
-                  "name": "Professional Services (Legal, Accounting)",
+                  "name": "Professional Service (Legal, Accounting)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1529,7 +1556,7 @@
                   ]
                 },
                 {
-                  "name": "Public Relations",
+                  "name": "Public Relation",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1604,7 +1631,7 @@
                   ]
                 },
                 {
-                  "name": "Security & Investigations",
+                  "name": "Security & Investigation",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1654,7 +1681,7 @@
                   ]
                 },
                 {
-                  "name": "Sports Management and Recreational Services",
+                  "name": "Sports Management and Recreational Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1679,7 +1706,7 @@
                   ]
                 },
                 {
-                  "name": "Technology Services",
+                  "name": "Technology Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1704,7 +1731,7 @@
                   ]
                 },
                 {
-                  "name": "Telecommunications",
+                  "name": "Telecommunication",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1754,7 +1781,7 @@
                   ]
                 },
                 {
-                  "name": "Transportation and Logistics",
+                  "name": "Transportation and Logistic",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -1858,6 +1885,12 @@
                   "inputType": "multi-field",
                   "fields": [
                     {
+                      "label": "Enter your industry",
+                      "inputType": "input",
+                      "key": "usertype4",
+                      "options": []
+                    },
+                    {
                       "label": "Enter your profession",
                       "inputType": "input",
                       "key": "usertype4",
@@ -1877,6 +1910,11 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "name": "Others",
+                  "label": "Enter your Industry",
+                  "inputType": "input"
                 }
               ]
             },
@@ -1962,7 +2000,7 @@
                   ]
                 },
                 {
-                  "name": "Arts and Culture (Museums, Galleries)",
+                  "name": "Art and Culture (Museum, Gallerie)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2087,7 +2125,7 @@
                   ]
                 },
                 {
-                  "name": "Chemicals",
+                  "name": "Chemical",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2112,7 +2150,7 @@
                   ]
                 },
                 {
-                  "name": "Consumer Electronics",
+                  "name": "Consumer Electronic",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2162,7 +2200,7 @@
                   ]
                 },
                 {
-                  "name": "Consulting Services (Management, Environmental)",
+                  "name": "Consulting Service (Management, Environmental)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2287,7 +2325,7 @@
                   ]
                 },
                 {
-                  "name": "Energy & Utilities (Electric, Water, and Waste Management)",
+                  "name": "Energy & Utility (Electric, Water, and Waste Management)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2337,7 +2375,7 @@
                   ]
                 },
                 {
-                  "name": "Environmental Services and Sustainability",
+                  "name": "Environmental Service and Sustainability",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2387,7 +2425,7 @@
                   ]
                 },
                 {
-                  "name": "Fintech and Financial Services",
+                  "name": "Fintech and Financial Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2437,7 +2475,7 @@
                   ]
                 },
                 {
-                  "name": "Healthcare Services",
+                  "name": "Healthcare Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2562,7 +2600,7 @@
                   ]
                 },
                 {
-                  "name": "Legal Services",
+                  "name": "Legal Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2837,7 +2875,7 @@
                   ]
                 },
                 {
-                  "name": "Professional Services (Legal, Accounting)",
+                  "name": "Professional Service (Legal, Accounting)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -2987,7 +3025,7 @@
                   ]
                 },
                 {
-                  "name": "Sports Management and Recreational Services",
+                  "name": "Sports Management and Recreational Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -3012,7 +3050,7 @@
                   ]
                 },
                 {
-                  "name": "Technology Services",
+                  "name": "Technology Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -3190,6 +3228,12 @@
                   "name": "Others",
                   "inputType": "multi-field",
                   "fields": [
+                    {
+                      "label": "Enter your industry",
+                      "inputType": "input",
+                      "key": "usertype4",
+                      "options": []
+                    },
                     {
                       "label": "Enter your profession",
                       "inputType": "input",
@@ -3495,7 +3539,7 @@
                   ]
                 },
                 {
-                  "name": "Consulting Services (Management, Environmental)",
+                  "name": "Consulting Service (Management, Environmental)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -3620,7 +3664,7 @@
                   ]
                 },
                 {
-                  "name": "Energy & Utilities (Electric, Water, and Waste Management)",
+                  "name": "Energy & Utility (Electric, Water, and Waste Management)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -3670,7 +3714,7 @@
                   ]
                 },
                 {
-                  "name": "Environmental Services and Sustainability",
+                  "name": "Environmental Service and Sustainability",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -3720,7 +3764,7 @@
                   ]
                 },
                 {
-                  "name": "Fintech and Financial Services",
+                  "name": "Fintech and Financial Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -3770,7 +3814,7 @@
                   ]
                 },
                 {
-                  "name": "Healthcare Services",
+                  "name": "Healthcare Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -3895,7 +3939,7 @@
                   ]
                 },
                 {
-                  "name": "Legal Services",
+                  "name": "Legal Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -4170,7 +4214,7 @@
                   ]
                 },
                 {
-                  "name": "Professional Services (Legal, Accounting)",
+                  "name": "Professional Service (Legal, Accounting)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -4320,7 +4364,7 @@
                   ]
                 },
                 {
-                  "name": "Sports Management and Recreational Services",
+                  "name": "Sports Management and Recreational Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -4345,7 +4389,7 @@
                   ]
                 },
                 {
-                  "name": "Technology Services",
+                  "name": "Technology Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -4524,6 +4568,12 @@
                   "inputType": "multi-field",
                   "fields": [
                     {
+                      "label": "Enter your industry",
+                      "inputType": "input",
+                      "key": "usertype4",
+                      "options": []
+                    },
+                    {
                       "label": "Enter your profession",
                       "inputType": "input",
                       "key": "usertype4",
@@ -4547,7 +4597,7 @@
               ]
             },
             {
-              "name": "Independence & Freelance",
+              "name": "Independent & Freelance",
               "label": "Enter your industry",
               "key": "usertype3",
               "inputType": "select",
@@ -4828,7 +4878,7 @@
                   ]
                 },
                 {
-                  "name": "Consulting Services (Management, Environmental)",
+                  "name": "Consulting Service (Management, Environmental)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -4953,7 +5003,7 @@
                   ]
                 },
                 {
-                  "name": "Energy & Utilities (Electric, Water, and Waste Management)",
+                  "name": "Energy & Utility (Electric, Water, and Waste Management)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -5003,7 +5053,7 @@
                   ]
                 },
                 {
-                  "name": "Environmental Services and Sustainability",
+                  "name": "Environmental Service and Sustainability",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -5053,7 +5103,7 @@
                   ]
                 },
                 {
-                  "name": "Fintech and Financial Services",
+                  "name": "Fintech and Financial Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -5103,7 +5153,7 @@
                   ]
                 },
                 {
-                  "name": "Healthcare Services",
+                  "name": "Healthcare Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -5228,7 +5278,7 @@
                   ]
                 },
                 {
-                  "name": "Legal Services",
+                  "name": "Legal Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -5503,7 +5553,7 @@
                   ]
                 },
                 {
-                  "name": "Professional Services (Legal, Accounting)",
+                  "name": "Professional Service (Legal, Accounting)",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -5653,7 +5703,7 @@
                   ]
                 },
                 {
-                  "name": "Sports Management and Recreational Services",
+                  "name": "Sports Management and Recreational Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -5678,7 +5728,7 @@
                   ]
                 },
                 {
-                  "name": "Technology Services",
+                  "name": "Technology Service",
                   "inputType": "multi-field",
                   "fields": [
                     {
@@ -5857,6 +5907,12 @@
                   "inputType": "multi-field",
                   "fields": [
                     {
+                      "label": "Enter your industry",
+                      "inputType": "input",
+                      "key": "usertype4",
+                      "options": []
+                    },
+                    {
                       "label": "Enter your profession",
                       "inputType": "input",
                       "key": "usertype4",
@@ -5878,18 +5934,23 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "Others",
+              "label": "Enter your Workdepartment",
+              "inputType": "input"
             }
           ]
         },
         {
           "name": "Entrepreneur",
-          "label": "Select Your Work Department",
+          "label": "Identify yourself further",
           "key": "usertype2",
           "inputType": "select",
           "options": [
             {
               "name": "Aspiring Entrepreneur",
-              "label": "Enter your Entrepreneur type",
+              "label": "Select what best describes you",
               "key": "usertype3",
               "inputType": "select",
               "options": [
@@ -5902,49 +5963,16 @@
               "name": "Established Entrepreneur",
               "label": "Enter your Entrepreneur type",
               "key": "usertype3",
-              "inputType": "select",
+              "inputType": "multi-select",
               "options": [
                 { "name": "Entrepreneur" },
                 { "name": "Startup Mentor" },
                 { "name": "Angle Investor" }
               ]
-            }
-          ]
-        },
-        {
-          "name": "Student",
-          "label": "Choose your education level",
-          "key": "usertype2",
-          "inputType": "select",
-          "options": [
-            {
-              "name": "Secondary School (Grade 1 to 10)",
-              "label": "Provide name of your Educational Institution",
-              "key": "usertype3",
-              "inputType": "input"
-            },
-            {
-              "name": "Senior Secondary School/College (Grade 11 & 12)",
-              "label": "Provide name of your Educational Institution",
-              "key": "usertype3",
-              "inputType": "input"
-            },
-            {
-              "name": "Undergraduate College",
-              "label": "Provide name of your Educational Institution",
-              "key": "usertype3",
-              "inputType": "input"
-            },
-            {
-              "name": "Postgraduate College",
-              "label": "Provide name of your Educational Institution",
-              "key": "usertype3",
-              "inputType": "input"
             },
             {
               "name": "Others",
-              "label": "Provide name of your Educational Institution",
-              "key": "usertype3",
+              "label": "Enter your Service Type",
               "inputType": "input"
             }
           ]
@@ -5952,71 +5980,71 @@
         {
           "name": "Creative Arts and Enrichment Educator",
           "key": "usertype2",
-          "label": "Select your Service Type",
-          "inputType": "select",
+          "label": "Select what you can teach",
+          "inputType": "multi-select",
           "options": [
             {
-              "name": "Creative Arts: Engaging in artistic activities such as painting, drawing, and sculpture."
+              "name": "Creative Arts"
             },
             {
-              "name": "Music and Performing Arts: Participating in music, theater, dance, and other performance-based activities."
+              "name": "Music and Performing Arts"
             },
             {
-              "name": "Sports and Physical Activities: Involving in various sports and physical exercises to stay active and healthy."
+              "name": "Sports and Physical Activities"
             },
             {
-              "name": "Language Learning: Learning new languages and improving language skills."
+              "name": "Language Learning"
             },
             {
-              "name": "DIY Projects: Undertaking do-it-yourself projects to create or repair items."
+              "name": "DIY Projects"
             },
             {
-              "name": "Photography and Videography: Learning and practicing photography and video-making skills."
+              "name": "Photography and Videography"
             },
             {
-              "name": "Cooking and Culinary Arts: Exploring the art of cooking and baking, and learning new culinary skills."
+              "name": "Cooking and Culinary Arts"
             },
             {
-              "name": "Gardening and Nature Exploration: Engaging in gardening and exploring nature and wildlife."
+              "name": "Gardening and Nature Exploration"
             },
             {
-              "name": "Writing and Literature: Developing writing skills and exploring literary works."
+              "name": "Writing and Literature"
             },
             {
-              "name": "Crafts and Handmade Creations: Creating handmade crafts and art pieces."
+              "name": "Crafts and Handmade Creations"
             },
             {
-              "name": "Science and Technology Exploration: Investigating scientific concepts and exploring technological advancements."
+              "name": "Science and Technology Exploration"
             },
             {
-              "name": "Mindfulness and Meditation: Practicing mindfulness and meditation for mental well-being."
+              "name": "Mindfulness and Meditation"
             },
             {
-              "name": "Cultural Exploration: Learning about and experiencing different cultures and traditions."
+              "name": "Cultural Exploration"
             },
             {
-              "name": "Health and Fitness: Engaging in activities that promote physical health and fitness."
+              "name": "Health and Fitness"
             },
             {
-              "name": "Gaming and E-Sports: Participating in video games and competitive e-sports."
+              "name": "Gaming and E-Sports"
             },
             {
-              "name": "Astronomy and Space Exploration: Exploring the field of astronomy and studying space."
+              "name": "Astronomy and Space Exploration"
             },
             {
-              "name": "Historical Reenactments and Study: Participating in historical reenactments and studying history."
+              "name": "Historical Reenactments and Study"
             },
             {
-              "name": "Martial Arts and Self-Defense: Learning martial arts and self-defense techniques."
+              "name": "Martial Arts and Self-Defense"
             },
             {
-              "name": "Fashion Design and Styling: Exploring fashion design, styling, and clothing creation."
+              "name": "Fashion Design and Styling"
             },
             {
-              "name": "Aquatic Sports and Activities: Participating in water-based sports and activities."
+              "name": "Aquatic Sports and Activities"
             },
             {
-              "name": "Public Speaking and Debate: Developing public speaking and debate skills."
+              "name": "Public Speaking and Debate"
             },
             {
               "name": "Others",

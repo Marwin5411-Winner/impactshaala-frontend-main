@@ -34,9 +34,9 @@ export default HomeIndex;
 const categories = [
   { id: "1", name: "Educational" },
   { id: "2", name: "Social Impact" },
-  { id: "3", name: "Careers" },
-  { id: "4", name: "Entrepreneurship & Funding" },
-  { id: "5", name: "Live Events" },
+  { id: "3", name: "Live Events" },
+  { id: "4", name: "Careers" },
+  { id: "5", name: "Startup & Social Funding" },
   { id: "6", name: "Talent Master" },
 ];
 
@@ -200,7 +200,7 @@ function TabBar() {
         </Tab>
         <Tab
           eventKey="home"
-          title="My Community/Services"
+          title="Opportunities & Services"
           className="bg-white"
         >
           {/* Category Filters as Buttons */}

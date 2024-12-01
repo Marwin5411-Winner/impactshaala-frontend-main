@@ -275,11 +275,25 @@ function RequirementForm() {
               </Col>
             </Form.Group>
 
+            <div className="d-flex justify-content-center">
+            <p className="mt-5 ">Already have this project posted on platform? Click <a className="link-primary" href="">here</a> to Share with us the same</p>
+            </div>
+
+            
+
             <div className="d-flex justify-content-end">
               <Button variant="primary" type="submit">
                 Submit
               </Button>
             </div>
+
+
+            <div className="d-flex justify-content-center bg-primary text-white mt-5">
+              <p className="mt-3">Our Team will review your request and Get in touch with you as soon as possible. Thank you for reaching out to Impactshaala</p>
+            </div>
+
+
+            
           </Form>
         </Container>
       </div>

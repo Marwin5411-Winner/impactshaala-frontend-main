@@ -198,7 +198,7 @@ function SignUpIndex() {
 							</div>
 							<div className="ps-4" style={{flexGrow: "1"}}>
 								{currentStep === 1 && <SignupSection nextStep={nextStep}/>}
-								{currentStep === 2 && <AccountTypeSection nextStep={nextStep} prevStep={previousStep} userDetails={userDetails} setUserDetails={setUserDetails} options={["ORGANIZATION", "INDIVIDUAL"]}/>}
+								{currentStep === 2 && <AccountTypeSection nextStep={nextStep} prevStep={previousStep} userDetails={userDetails} setUserDetails={setUserDetails} options={["INDIVIDUAL","ORGANIZATION"]}/>}
                 {currentStep === 3 && <UserTypes nextStep={nextStep} prevStep={previousStep} userDetails={userDetails} setUserDetails={setUserDetails} usertypes={usertypes}/>}
 								{currentStep === 4 && <AccountInfoSection handleGoogleSignup={handleGoogleSignup} prevStep={previousStep} userDetails={userDetails} setUserDetails={setUserDetails} handleSignup={handleSignup} errors={errors} collabKeywords={collabKeywords} setErrors={setErrors}/>}
               </div>
