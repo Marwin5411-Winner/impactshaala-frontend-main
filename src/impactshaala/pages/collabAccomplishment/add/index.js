@@ -118,7 +118,7 @@ const CollaborativeAccomplishmentForm = () => {
           <Row className="mb-3">
             <Col xs={12}>
               <Form.Group controlId="description">
-                <Form.Label>My Opportunity/Services Overview</Form.Label>
+                <Form.Label>Opportunity/Services Overview</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={3}

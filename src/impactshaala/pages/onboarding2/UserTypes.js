@@ -11,7 +11,8 @@ const usertypes = [
 	"usertype3",
 	"usertype4",
 	"usertype5",
-	"usertype6"
+	"usertype6",
+	"usertype7"
 ]
 
 const UserTypes = ({userDetails, setUserDetails, nextStep, prevStep}) => {
@@ -38,6 +39,7 @@ const UserTypes = ({userDetails, setUserDetails, nextStep, prevStep}) => {
 			usertype4: "",
 			usertype5: "",
 			usertype6: "",
+			usertype7: "",
 		}))
 		prevStep()
 	}

@@ -118,6 +118,8 @@ const AdditionalInfo = ({
       email: "",
       name: "",
       collabKeywords: [],
+      location_cord: "",
+      location_type: "",
       password: "",
       c_password: "",
     }));
@@ -274,6 +276,33 @@ const AdditionalInfo = ({
                   { LocationState && (
                     <p className="text-success">{userDetails.geolocation}</p>
                   )}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+            <Col md={12}>
+                <div className="flex flex-column mb-4">
+                  <Form.Group className="form-group">
+                  <Form.Label>
+                    Enter Your Location (Manual)<span style={{ color: "red" }}>*</span>{" "}
+                  </Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter Your Location"
+                    style={{ border: errors.email ? "1px solid red" : "" }}
+                    value={userDetails.email}
+                    onChange={handleChange}
+                    onBlur={handleCheckEmailAvailable}
+                    required
+                    name="email"
+                  />
+                  {errors.email && (
+                    <p className="text-danger">{errors.email}</p>
+                  )}
+                  {userDetails.email && !errors.email && (
+                    <p className="text-success">Email available</p>
+                  )}
+                </Form.Group>
                 </div>
               </Col>
             </Row>
