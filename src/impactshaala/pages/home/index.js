@@ -239,7 +239,7 @@ function TabBar() {
           )}
         </Tab>
 
-        <Tab eventKey="polling" title="Polls / Questions">
+        <Tab eventKey="polling" title="Polls & Questions">
           {polls &&
             polls.map((poll, index) =>
               poll.options && poll.options.length > 0 ? (

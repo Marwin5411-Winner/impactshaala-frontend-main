@@ -141,7 +141,11 @@ const Header = () => {
                 <Dropdown.Item>No results found</Dropdown.Item>
               )}
               {results.map((user) => (
-                <Dropdown.Item key={user._id}>
+                <Dropdown.Item
+                  as="a"
+                  href={`/profile-details/${user._id}`}
+                  key={user._id}
+                >
                   {user.name} - {user.accountType}
                 </Dropdown.Item>
               ))}

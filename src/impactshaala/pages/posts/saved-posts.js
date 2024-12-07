@@ -144,7 +144,7 @@ function TabBar() {
         <Project name="4" />
         <Project name="5" /> */}
         </Tab>
-        <Tab eventKey="polling" title="Polls / Questions">
+        <Tab eventKey="polling" title="Polls & Questions">
           {/* <PollCard />
         <Question />
         <PollCard />

@@ -32,92 +32,75 @@ const ProfileSectionDropdown = () => {
   };
 
   return (
-    <Dropdown as={ButtonGroup}>
-      <Card className="p-3" style={{ backgroundColor: "#e0e0e0" }}>
+    <Card className="p-3" style={{ backgroundColor: "#e0e0e0" }}>
+      {/* Dropdown Trigger */}
+      <Dropdown as={ButtonGroup}>
         <Dropdown.Toggle
-          as={Link}
-          to="#"
-          className="btn btn-link"
+          variant="link"
+          className="text-decoration-none"
           style={{ color: "blue", fontWeight: "bold" }}
         >
-          Add profile section
+          Add Profile Section
         </Dropdown.Toggle>
 
+        {/* Dropdown Menu */}
         <Dropdown.Menu>
           <Dropdown.Item>Credibility Board</Dropdown.Item>
-          {/* Nested Dropdown for My Offerings */}
-          <Dropdown as={ButtonGroup} drop="end">
-            <Dropdown.Toggle className="dropdown-item">
-              My Offerings
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              {/* Nested Options for My Offerings */}
-              <Dropdown.Item>
-                Collaborate For
-                <Dropdown.Menu>
-                  <Form.Check 
-                    type="checkbox" 
-                    name="Consulting" 
-                    label="Consulting" 
-                    onChange={handleKeywordChange} 
-                    disabled={selectedKeywords.length >= 5 && !selectedKeywords.includes("Consulting")} 
-                  />
-                  <Form.Check 
-                    type="checkbox" 
-                    name="Workshop" 
-                    label="Workshop" 
-                    onChange={handleKeywordChange} 
-                    disabled={selectedKeywords.length >= 5 && !selectedKeywords.includes("Workshop")} 
-                  />
-                </Dropdown.Menu>
-              </Dropdown.Item>
-              <Dropdown.Item>
-                Book Your Slot
-                <Dropdown.Menu>
-                  <Form.Check 
-                    type="checkbox" 
-                    name="Mentorship" 
-                    label="Mentorship" 
-                    onChange={handleKeywordChange} 
-                    disabled={selectedKeywords.length >= 5 && !selectedKeywords.includes("Mentorship")} 
-                  />
-                  <Form.Check 
-                    type="checkbox" 
-                    name="Webinar" 
-                    label="Webinar" 
-                    onChange={handleKeywordChange} 
-                    disabled={selectedKeywords.length >= 5 && !selectedKeywords.includes("Webinar")} 
-                  />
-                </Dropdown.Menu>
-              </Dropdown.Item>
-              <Dropdown.Item>
-                Request Services
-                <Dropdown.Menu>
-                  <Form.Check 
-                    type="checkbox" 
-                    name="Coaching" 
-                    label="Coaching" 
-                    onChange={handleKeywordChange} 
-                    disabled={selectedKeywords.length >= 5 && !selectedKeywords.includes("Coaching")} 
-                  />
-                  <Form.Check 
-                    type="checkbox" 
-                    name="Seminar" 
-                    label="Seminar" 
-                    onChange={handleKeywordChange} 
-                    disabled={selectedKeywords.length >= 5 && !selectedKeywords.includes("Seminar")} 
-                  />
-                </Dropdown.Menu>
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
 
+          {/* My Offerings Section */}
+          <Dropdown.Item>
+            My Offerings
+            <div className="mt-2 px-3">
+              <Form.Check
+                type="checkbox"
+                name="Consulting"
+                label="Consulting"
+                onChange={handleKeywordChange}
+                disabled={
+                  selectedKeywords.length >= 5 &&
+                  !selectedKeywords.includes("Consulting")
+                }
+              />
+              <Form.Check
+                type="checkbox"
+                name="Workshop"
+                label="Workshop"
+                onChange={handleKeywordChange}
+                disabled={
+                  selectedKeywords.length >= 5 &&
+                  !selectedKeywords.includes("Workshop")
+                }
+              />
+              <Form.Check
+                type="checkbox"
+                name="Mentorship"
+                label="Mentorship"
+                onChange={handleKeywordChange}
+                disabled={
+                  selectedKeywords.length >= 5 &&
+                  !selectedKeywords.includes("Mentorship")
+                }
+              />
+              <Form.Check
+                type="checkbox"
+                name="Webinar"
+                label="Webinar"
+                onChange={handleKeywordChange}
+                disabled={
+                  selectedKeywords.length >= 5 &&
+                  !selectedKeywords.includes("Webinar")
+                }
+              />
+            </div>
+          </Dropdown.Item>
+
+          {/* Other Dropdown Items */}
           <Dropdown.Item>My Reviews</Dropdown.Item>
           <Dropdown.Item>My Achievements</Dropdown.Item>
           <Dropdown.Item>Current Projects/Activities</Dropdown.Item>
         </Dropdown.Menu>
-      </Card>
-    </Dropdown>
+      </Dropdown>
+    </Card>
   );
 };
 

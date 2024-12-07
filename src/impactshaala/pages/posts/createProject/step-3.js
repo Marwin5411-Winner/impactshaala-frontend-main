@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Col,
   Card,
@@ -8,24 +8,33 @@ import {
   Button,
   FormSelect,
 } from "react-bootstrap";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 // Step 3 Component
-function Step3({ formData, handleChange, nextStep, prevStep }) {
+function Step3({ formData, setFormData, nextStep, prevStep }) {
+
+  const [textValue, setTextValue] = useState("");
+
+  function sendToMainData() {
+    setFormData({ ...formData, additional: textValue});
+  }
+
+  useEffect(() => {
+    sendToMainData();
+  }, [textValue])
+  
     return (
       <div>
         <h4>3 of 3: Additional Information</h4>
         <p>Add any additional relevant details to complete your post.</p>
-        <Form.Group as={Row} className="mb-3">
+        <Form.Group as={Col} className="mb-3">
           <Form.Label column sm={3}>
             Add additional details
           </Form.Label>
-          <Col sm={9}>
-            <Form.Control
-              as="textarea"
-              name="additionalDetails"
-              value={formData.additionalDetails}
-              onChange={handleChange}
-            />
+          <Col sm={12}>
+          <ReactQuill theme="snow" name="additionalDetails" value={textValue} onChange={setTextValue} />
+
           </Col>
         </Form.Group>
         <div className="d-flex justify-content-between">

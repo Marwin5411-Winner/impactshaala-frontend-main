@@ -46,8 +46,6 @@ import HexagonCard from "./components/HexagonCard";
 import MyCommunitySection from "./components/MyCommunitySec";
 import ProfileSectionDropdown from "./components/ProfileSelection";
 
-
-
 const MyProfile = () => {
   const location = useLocation();
   const [userData, setUserData] = useState({});
@@ -177,7 +175,13 @@ const MyProfile = () => {
                     className="profile-header position-relative"
                     style={{ height: "300px", marginBottom: "50px" }}
                   >
-                    <div className="">
+                    <div
+                      className=""
+                      style={{
+                        position: "relative",
+                        height: "300px",
+                      }}
+                    >
                       {/* Background banner */}
                       <div
                         style={{
@@ -218,6 +222,36 @@ const MyProfile = () => {
                             border: "5px solid white",
                           }}
                         />
+                      </div>
+
+                      {/* Button for Update or Remove Background */}
+                      <div
+                        className="position-absolute"
+                        style={{
+                          bottom: "10px",
+                          right: "10px",
+                          display: "flex",
+                          gap: "10px",
+                        }}
+                      >
+                        <button
+                          className="btn btn-primary"
+                          onClick={() => {
+                            // Add your logic to update the background image
+                            console.log("Update Background Image");
+                          }}
+                        >
+                          Update
+                        </button>
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => {
+                            // Add your logic to remove the background image
+                            console.log("Remove Background Image");
+                          }}
+                        >
+                          Remove
+                        </button>
                       </div>
                     </div>
 
@@ -323,19 +357,50 @@ const MyProfile = () => {
             <Row className="mt-4 px-4">
               <Col sm={8}>
                 {/* User Description */}
-                <Card className="p-3" style={{ backgroundColor: "#e0e0e0" }}>
-                  <strong>User Description</strong>
-                  <p className="mb-0">
+                <Card
+                  className="p-3 position-relative"
+                  style={{ backgroundColor: "#e0e0e0" }}
+                >
+                  <div className="d-flex justify-content-between align-items-center">
+                    <strong>User Description</strong>
+
+                    {/* Dropdown Button */}
+                    <Dropdown>
+                      <Dropdown.Toggle
+                        variant="secondary"
+                        id="dropdown-basic"
+                        size="sm"
+                        style={{
+                          backgroundColor: "#d0d0d0",
+                          border: "none",
+                          color: "black",
+                        }}
+                      >
+                        Options
+                      </Dropdown.Toggle>
+
+                      <Dropdown.Menu>
+                        <Dropdown.Item
+                          onClick={() => {
+                            // Add your edit functionality here
+                            console.log("Edit User Description");
+                          }}
+                        >
+                          Edit
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
+
+                  {/* Description Content */}
+                  <p className="mb-0 mt-2">
                     {userData.description || "No description available"}
                   </p>
                 </Card>
               </Col>
 
               {/* Add Profile Section Dropdown */}
-              <Col
-                sm={4}
-                className="justify-content-end"
-              >
+              <Col sm={4} className="justify-content-end">
                 <ProfileSectionDropdown />
               </Col>
             </Row>
@@ -352,7 +417,7 @@ const MyProfile = () => {
               </Col>
             </Row>
 
-            <ReviewsTabs profile={userData} post={mediaPosts}/>
+            <ReviewsTabs profile={userData} post={mediaPosts} />
           </Col>
         </Row>
       </PageTemplate2>

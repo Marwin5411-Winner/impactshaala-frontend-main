@@ -30,7 +30,6 @@ function CreatePollsQuestionsPost() {
   });
   const [selected, setSelected] = useState("SUBJECTIVE");
 
-
   const labelsForIndividual = [
     "Daily Inspiration",
     "Learnings",
@@ -406,7 +405,13 @@ function CreatePollsQuestionsPost() {
                                   }
                                 </Form.Group> */}
                                 <Col md="12" className="my-2">
-                                  <Form.Label>Poll Duration</Form.Label>
+                                  <Form.Label>
+                                    {selected === "POLL" ? (
+                                      <p>Poll Duration</p>
+                                    ) : (
+                                      <p>Subjective Duration</p>
+                                    )}
+                                  </Form.Label>
                                   <Form.Select
                                     onChange={handleChange}
                                     value={formData.duration}

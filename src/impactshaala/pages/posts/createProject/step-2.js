@@ -366,7 +366,7 @@ function Step2({
       {formData.costInvolved === "Yes" && (
         <Form.Group as={Row} className="mb-3">
           <Form.Label column sm={3}>
-            Enter Amount
+            Mention the cost
           </Form.Label>
           <Col sm={9}>
             <Form.Control
@@ -383,7 +383,7 @@ function Step2({
       {/* Eligibility */}
       <Form.Group as={Row} className="mb-3">
         <Form.Label column sm={3}>
-          Eligibility Criteria
+        Mention the Eligibility Criteria (if applicable)
         </Form.Label>
         <Col sm={9}>
           <Form.Control

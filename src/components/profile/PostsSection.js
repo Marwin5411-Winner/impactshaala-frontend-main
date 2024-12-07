@@ -89,7 +89,7 @@ const PostsSection = ({
         <ProjectCard name="4" myProfile={myProfile}/>
         <ProjectCard name="5" myProfile={myProfile}/>
       </Tab>
-      <Tab eventKey="polling" title="Polls / Questions">
+      <Tab eventKey="polling" title="Polls & Questions">
         {
           polls && polls.map((poll, index) => {
             return (poll.options && poll.options.length > 0) ? (

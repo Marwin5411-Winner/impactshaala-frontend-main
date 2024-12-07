@@ -14,7 +14,7 @@ import user9 from '../../../assets/images/user/09.jpg'
 import user10 from '../../../assets/images/user/10.jpg'
 import Header from '../../../components/partials/dashboard/HeaderStyle/header'
 import Sidebar from '../../../components/partials/dashboard/SidebarStyle/sidebar'
-// import page100 from '../../../assets/images/page-img/100.jpg'
+// import page100 from '../../../assets/images/page-img/100.jpg' 
 
 const Chat=()=>{
     const [show, setShow] = useState('')
